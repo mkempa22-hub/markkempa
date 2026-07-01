@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   try {
     const { q } = req.body || {};
     const key = process.env.OPENAI_API_KEY;
-    if (!key) return res.status(200).json({ answer: "LLM not configured.", source: null });
+    if (!key) return res.status(501).json({ error: "LLM not configured" });
     const r = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
@@ -24,5 +24,5 @@ export default async function handler(req, res) {
     });
     const j = await r.json();
     res.status(200).json({ answer: j.choices?.[0]?.message?.content || "No answer.", source: "Board pack (LLM)" });
-  } catch (e) { res.status(200).json({ answer: "Error reaching the model.", source: null }); }
+  } catch (e) { res.status(500).json({ error: "Error reaching the model" }); }
 }
