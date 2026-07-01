@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GlowMD Aesthetics — Franchise Model</title>
+<title>GlowMD Aesthetics — DTC Med Spa Model</title>
 <style>
   :root{--navy:#1F2A44;--teal:#2E7D88;--ink:#222;--mut:#6b7280;--line:#e5e7eb;--bg:#f6f8f9;--card:#fff;--good:#1f8a4c;--bad:#c0392b;--amber:#9C6500;--purple:#7a4fb0}
   *{box-sizing:border-box}
@@ -106,13 +106,13 @@ table th,thead{background:#1b2028}
 </head>
 <body>
 <header>
-  <h1>GlowMD Aesthetics — Franchise Model</h1>
-  <p>Illustrative med-spa franchise · 75 facilities across 6 states · franchisor + franchisee economics</p>
+  <h1>GlowMD Aesthetics — DTC Med Spa Model</h1>
+  <p>Illustrative direct-to-consumer med spa · multi-site operating, CAC &amp; financing model</p>
   <div class="topbar">
     <div class="tabs">
       <button class="tabbtn active" data-tab="model">Model</button>
       <button class="tabbtn" data-tab="econ">Unit Economics</button>
-      <button class="tabbtn" data-tab="state">P&amp;L by State</button>
+      <button class="tabbtn" data-tab="state">P&amp;L by Site</button>
       <button class="tabbtn" data-tab="bench">Benchmarks</button>
     </div>
     <button class="copybtn" id="copyLink">🔗 Copy shareable link</button>
@@ -120,33 +120,33 @@ table th,thead{background:#1b2028}
 </header>
 
 <div id="view-model" class="view active">
-<div class="ctlbar"><div class="ctlgroup" style="flex:1 1 460px"><div class="sub">Facilities by state</div><div class="scrollx"><table class="pg"><thead><tr><th>State</th><th>On</th><th>Launch</th><th>Facilities</th><th>Rev/ctr $K/mo</th><th>State fixed $K/mo</th></tr></thead><tbody><tr><td>Arizona</td><td><input type="checkbox" id="s0_on" checked></td><td><input class="ng" type="number" id="s0_lm" min="0" max="24" step="1" value="0" style="width:36px"></td><td><input class="ng" type="number" id="s0_r0" min="0" max="40" step="1" value="15" style="width:40px"></td><td><input class="ng" type="number" id="s0_g" min="60" max="300" step="5" value="155" style="width:46px"></td><td><input class="ng" type="number" id="s0_fx" min="0" max="120" step="1" value="34" style="width:44px"></td></tr><tr><td>Texas</td><td><input type="checkbox" id="s1_on" checked></td><td><input class="ng" type="number" id="s1_lm" min="0" max="24" step="1" value="0" style="width:36px"></td><td><input class="ng" type="number" id="s1_r0" min="0" max="40" step="1" value="18" style="width:40px"></td><td><input class="ng" type="number" id="s1_g" min="60" max="300" step="5" value="150" style="width:46px"></td><td><input class="ng" type="number" id="s1_fx" min="0" max="120" step="1" value="38" style="width:44px"></td></tr><tr><td>Florida</td><td><input type="checkbox" id="s2_on" checked></td><td><input class="ng" type="number" id="s2_lm" min="0" max="24" step="1" value="0" style="width:36px"></td><td><input class="ng" type="number" id="s2_r0" min="0" max="40" step="1" value="14" style="width:40px"></td><td><input class="ng" type="number" id="s2_g" min="60" max="300" step="5" value="150" style="width:46px"></td><td><input class="ng" type="number" id="s2_fx" min="0" max="120" step="1" value="32" style="width:44px"></td></tr><tr><td>California</td><td><input type="checkbox" id="s3_on" checked></td><td><input class="ng" type="number" id="s3_lm" min="0" max="24" step="1" value="0" style="width:36px"></td><td><input class="ng" type="number" id="s3_r0" min="0" max="40" step="1" value="13" style="width:40px"></td><td><input class="ng" type="number" id="s3_g" min="60" max="300" step="5" value="165" style="width:46px"></td><td><input class="ng" type="number" id="s3_fx" min="0" max="120" step="1" value="36" style="width:44px"></td></tr><tr><td>Georgia</td><td><input type="checkbox" id="s4_on" checked></td><td><input class="ng" type="number" id="s4_lm" min="0" max="24" step="1" value="0" style="width:36px"></td><td><input class="ng" type="number" id="s4_r0" min="0" max="40" step="1" value="8" style="width:40px"></td><td><input class="ng" type="number" id="s4_g" min="60" max="300" step="5" value="140" style="width:46px"></td><td><input class="ng" type="number" id="s4_fx" min="0" max="120" step="1" value="24" style="width:44px"></td></tr><tr><td>Colorado</td><td><input type="checkbox" id="s5_on" checked></td><td><input class="ng" type="number" id="s5_lm" min="0" max="24" step="1" value="0" style="width:36px"></td><td><input class="ng" type="number" id="s5_r0" min="0" max="40" step="1" value="7" style="width:40px"></td><td><input class="ng" type="number" id="s5_g" min="60" max="300" step="5" value="145" style="width:46px"></td><td><input class="ng" type="number" id="s5_fx" min="0" max="120" step="1" value="22" style="width:44px"></td></tr><tr><td>Nevada</td><td><input type="checkbox" id="s6_on"></td><td><input class="ng" type="number" id="s6_lm" min="0" max="24" step="1" value="6" style="width:36px"></td><td><input class="ng" type="number" id="s6_r0" min="0" max="40" step="1" value="6" style="width:40px"></td><td><input class="ng" type="number" id="s6_g" min="60" max="300" step="5" value="140" style="width:46px"></td><td><input class="ng" type="number" id="s6_fx" min="0" max="120" step="1" value="20" style="width:44px"></td></tr><tr><td>N. Carolina</td><td><input type="checkbox" id="s7_on"></td><td><input class="ng" type="number" id="s7_lm" min="0" max="24" step="1" value="9" style="width:36px"></td><td><input class="ng" type="number" id="s7_r0" min="0" max="40" step="1" value="8" style="width:40px"></td><td><input class="ng" type="number" id="s7_g" min="60" max="300" step="5" value="145" style="width:46px"></td><td><input class="ng" type="number" id="s7_fx" min="0" max="120" step="1" value="24" style="width:44px"></td></tr></tbody></table></div><div class="hint">Each state runs a number of <b>facilities</b> at a per-center monthly revenue, with a <b>state fixed cost</b> (regional VP, field ops, local marketing). Toggle expansion states on to add facilities. Default active footprint = <b>75 facilities</b> across 6 states.</div></div><div class="ctlgroup" style="flex:1 1 340px"><div class="sub">Franchise economics</div><div class="ctlgrid"><div class="ctl"><label>Royalty rate<span class="rowval" id="vRoy">6.0%</span></label><input type="range" id="roy" min="3" max="9" step="0.5" value="6"></div><div class="ctl"><label>National ad fund<span class="rowval" id="vAdf">2.0%</span></label><input type="range" id="adf" min="0" max="4" step="0.5" value="2"></div><div class="ctl"><label>Initial franchise fee<span class="rowval" id="vFfee">$45K</span></label><input type="range" id="ffee" min="20" max="75" step="5" value="45"></div><div class="ctl"><label>Same-store growth /mo<span class="rowval" id="vSss">1.0%</span></label><input type="range" id="sss" min="0" max="3" step="0.1" value="1"></div><div class="ctl"><label>Franchise dev cost / unit<span class="rowval" id="vDevU">$12K</span></label><input type="range" id="devU" min="2" max="30" step="1" value="12"></div><div class="ctl"><label>Franchisee occupancy %<span class="rowval" id="vOcc">12%</span></label><input type="range" id="occ" min="6" max="20" step="1" value="12"></div><div class="ctl"><label>Franchisee build cost<span class="rowval" id="vBld">$650K</span></label><input type="range" id="bld" min="300" max="1200" step="25" value="650"></div></div><div class="hint">Franchisor revenue = royalty % × system sales + franchise fees on new facilities. Per-state fixed costs (in the state grid) and franchise development are the other main costs. Occupancy &amp; build cost drive franchisee returns.</div></div><div class="ctlgroup" style="flex:1 1 300px"><div class="sub">Unit detail (consumer)</div><div class="ctlgrid"><div class="ctl"><label>In-center avg ticket<span class="rowval" id="vRpvIP">$450</span></label><input type="range" id="rpvIP" min="200" max="900" step="10" value="450"></div><div class="ctl"><label>Consumer CAC<span class="rowval" id="vCac">$250</span></label><input type="range" id="cac" min="50" max="700" step="10" value="250"></div><div class="ctl"><label>Visits / cust / yr<span class="rowval" id="vVy">3.5</span></label><input type="range" id="visitsYr" min="1" max="8" step="0.5" value="3.5"></div><div class="ctl"><label>Customer lifetime (yrs)<span class="rowval" id="vLy">2.5</span></label><input type="range" id="lifeYrs" min="0.5" max="5" step="0.5" value="2.5"></div></div><div class="hint">Consumer economics inside one facility (cash-pay, all in-center). Avg ticket sets visit volume for labor; CAC &amp; lifetime drive LTV:CAC.</div></div><div class="ctlgroup"><div class="sub">Labor</div><div class="ctlgrid"><div class="ctl"><label>Utilization<span class="rowval" id="vUtil">80%</span></label><input type="range" id="util" min="60" max="95" step="1" value="80"></div><div class="ctl"><label>Provider $/hr<span class="rowval" id="vIpcRate">$125/hr</span></label><input type="range" id="ipcRate" min="90" max="180" step="1" value="125"></div><div class="ctl"><label>Visits / provider / day<span class="rowval" id="vIpcDay">11.0</span></label><input type="range" id="ipcDay" min="6" max="16" step="0.5" value="11"></div></div></div><div class="ctlgroup"><div class="sub">Support staff — ratio per clinician &amp; $/yr</div><div class="ctlgrid"><div class="ctl"><label>RN / clinical<span class="rowval"><span id="vRnR">0.50</span>× · $<span id="vRnC">120</span>K</span></label><input type="range" id="rnR" min="0.2" max="1" step="0.05" value="0.25"><input type="range" id="rnC" min="80" max="180" step="5" value="120"></div><div class="ctl"><label>Aestheticians / MA<span class="rowval"><span id="vBhtR">0.80</span>× · $<span id="vBhtC">70</span>K</span></label><input type="range" id="bhtR" min="0.3" max="1.5" step="0.05" value="0.5"><input type="range" id="bhtC" min="50" max="110" step="5" value="70"></div><div class="ctl"><label>Front desk<span class="rowval"><span id="vCcR">0.30</span>× · $<span id="vCcC">75</span>K</span></label><input type="range" id="ccR" min="0.1" max="0.6" step="0.05" value="0.3"><input type="range" id="ccC" min="50" max="110" step="5" value="75"></div><div class="ctl"><label>Med director<span class="rowval"><span id="vSupR">0.12</span>× · $<span id="vSupC">160</span>K</span></label><input type="range" id="supR" min="0.05" max="0.3" step="0.01" value="0.08"><input type="range" id="supC" min="110" max="220" step="5" value="160"></div></div></div><div class="ctlgroup" style="flex:1 1 280px;min-width:240px"><div class="sub">Supplies / non-labor cost / visit</div><div class="ctlgrid"><div class="ctl"><label>Supplies + facility / visit<span class="rowval" id="vIpFac">$80</span></label><input type="range" id="ipFac" min="40" max="140" step="1" value="80"></div></div></div><div class="ctlgroup"><div class="sub">Financing</div><div class="ctlgrid"><div><label class="chk"><input type="checkbox" id="eqOn"> Equity raise</label><div class="ctl"><label>Amount<span class="rowval" id="vEqA">$12.0M</span></label><input type="range" id="eqA" min="5" max="20" step="0.5" value="12"></div><div class="ctl"><label>Close month<span class="rowval" id="vEqM">M9</span></label><input type="range" id="eqM" min="3" max="18" step="1" value="9"></div></div><div><label class="chk"><input type="checkbox" id="dbOn"> Venture debt</label><div class="ctl"><label>Amount<span class="rowval" id="vDbA">$5.0M</span></label><input type="range" id="dbA" min="2" max="10" step="0.5" value="5"></div><div class="ctl"><label>Draw month<span class="rowval" id="vDbM">M6</span></label><input type="range" id="dbM" min="3" max="18" step="1" value="6"></div></div></div><div class="hint" style="margin-top:6px;border-top:1px solid var(--line);padding-top:6px">Fixed: start cash $3.5M · floor $1.5M · raise lead 6 mo · debt 12%/yr.</div></div></div>
+<div class="ctlbar"><div class="ctlgroup" style="flex:1 1 430px"><div class="sub">Sites — ramp &amp; unit economics</div><div class="scrollx"><table class="pg"><thead><tr><th>Site</th><th>On</th><th>Launch</th><th>M0 rev $K</th><th>MoM g%</th><th>Fixed $K/mo</th><th>Build $K</th></tr></thead><tbody><tr><td>Scottsdale</td><td><input type="checkbox" id="s0_on" checked></td><td><input class="ng" type="number" id="s0_lm" min="0" max="24" step="1" value="0" style="width:38px"></td><td><input class="ng" type="text" inputmode="numeric" id="s0_r0" value="320" style="width:56px"></td><td><input class="ng" type="number" id="s0_g" min="-5" max="15" step="0.1" value="2.5" style="width:44px"></td><td><input class="ng" type="text" inputmode="numeric" id="s0_fx" value="60" style="width:50px"></td><td><input class="ng" type="text" inputmode="numeric" id="s0_en" value="0" style="width:56px"></td></tr><tr><td>Dallas</td><td><input type="checkbox" id="s1_on" checked></td><td><input class="ng" type="number" id="s1_lm" min="0" max="24" step="1" value="0" style="width:38px"></td><td><input class="ng" type="text" inputmode="numeric" id="s1_r0" value="260" style="width:56px"></td><td><input class="ng" type="number" id="s1_g" min="-5" max="15" step="0.1" value="3.0" style="width:44px"></td><td><input class="ng" type="text" inputmode="numeric" id="s1_fx" value="50" style="width:50px"></td><td><input class="ng" type="text" inputmode="numeric" id="s1_en" value="0" style="width:56px"></td></tr><tr><td>Miami</td><td><input type="checkbox" id="s2_on" checked></td><td><input class="ng" type="number" id="s2_lm" min="0" max="24" step="1" value="0" style="width:38px"></td><td><input class="ng" type="text" inputmode="numeric" id="s2_r0" value="200" style="width:56px"></td><td><input class="ng" type="number" id="s2_g" min="-5" max="15" step="0.1" value="3.5" style="width:44px"></td><td><input class="ng" type="text" inputmode="numeric" id="s2_fx" value="45" style="width:50px"></td><td><input class="ng" type="text" inputmode="numeric" id="s2_en" value="0" style="width:56px"></td></tr><tr><td>Austin</td><td><input type="checkbox" id="s3_on"></td><td><input class="ng" type="number" id="s3_lm" min="0" max="24" step="1" value="6" style="width:38px"></td><td><input class="ng" type="text" inputmode="numeric" id="s3_r0" value="120" style="width:56px"></td><td><input class="ng" type="number" id="s3_g" min="-5" max="15" step="0.1" value="6.0" style="width:44px"></td><td><input class="ng" type="text" inputmode="numeric" id="s3_fx" value="55" style="width:50px"></td><td><input class="ng" type="text" inputmode="numeric" id="s3_en" value="450" style="width:56px"></td></tr><tr><td>Nashville</td><td><input type="checkbox" id="s4_on"></td><td><input class="ng" type="number" id="s4_lm" min="0" max="24" step="1" value="9" style="width:38px"></td><td><input class="ng" type="text" inputmode="numeric" id="s4_r0" value="100" style="width:56px"></td><td><input class="ng" type="number" id="s4_g" min="-5" max="15" step="0.1" value="6.0" style="width:44px"></td><td><input class="ng" type="text" inputmode="numeric" id="s4_fx" value="50" style="width:50px"></td><td><input class="ng" type="text" inputmode="numeric" id="s4_en" value="400" style="width:56px"></td></tr></tbody></table></div><div class="hint">Each site ramps from its <b>M0 monthly revenue</b> at its <b>MoM growth</b>. <b>Fixed $/mo</b> = site GM salary, front desk, rent &amp; local overhead. <b>Build $</b> = one-time buildout/opening cost at launch.</div></div><div class="ctlgroup" style="flex:1 1 340px"><div class="sub">Revenue (DTC) &amp; marketing</div><div class="ctlgrid"><div class="ctl"><label>In-clinic avg ticket<span class="rowval" id="vRpvIP">$450</span></label><input type="range" id="rpvIP" min="200" max="900" step="10" value="450"></div><div class="ctl"><label>Virtual ticket (Rx)<span class="rowval" id="vRpvVirt">$180</span></label><input type="range" id="rpvVirt" min="60" max="400" step="10" value="180"></div><div class="ctl"><label>Virtual share of visits<span class="rowval" id="vTH">25%</span></label><input type="range" id="th" min="0" max="60" step="1" value="25"></div><div class="ctl"><label>Marketing % of revenue<span class="rowval" id="vMkt">18%</span></label><input type="range" id="mktPct" min="0" max="40" step="1" value="18"></div><div class="ctl"><label>CAC ($/customer)<span class="rowval" id="vCac">$250</span></label><input type="range" id="cac" min="50" max="700" step="10" value="250"></div><div class="ctl"><label>Visits / cust / yr<span class="rowval" id="vVy">3.5</span></label><input type="range" id="visitsYr" min="1" max="8" step="0.5" value="3.5"></div><div class="ctl"><label>Customer lifetime (yrs)<span class="rowval" id="vLy">2.5</span></label><input type="range" id="lifeYrs" min="0.5" max="5" step="0.5" value="2.5"></div></div><div class="hint">All cash-pay — no insurance. New customers/mo = marketing $ ÷ CAC. LTV = blended ticket × visits/yr × lifetime × gross margin.</div></div><div class="ctlgroup"><div class="sub">Labor</div><div class="ctlgrid"><div class="ctl"><label>Utilization<span class="rowval" id="vUtil">80%</span></label><input type="range" id="util" min="60" max="95" step="1" value="80"></div><div class="ctl"><label>In-person $/hr<span class="rowval" id="vIpcRate">$125/hr</span></label><input type="range" id="ipcRate" min="90" max="180" step="1" value="125"></div><div class="ctl"><label>Virtual $/hr<span class="rowval" id="vThcRate">$111/hr</span></label><input type="range" id="thcRate" min="80" max="160" step="1" value="111"></div><div class="ctl"><label>In-person v/clin/day<span class="rowval" id="vIpcDay">11.0</span></label><input type="range" id="ipcDay" min="6" max="16" step="0.5" value="11"></div><div class="ctl"><label>Virtual v/clin/day<span class="rowval" id="vThcDay">16.0</span></label><input type="range" id="thcDay" min="10" max="24" step="0.5" value="16"></div></div></div><div class="ctlgroup"><div class="sub">Support staff — ratio per clinician &amp; $/yr</div><div class="ctlgrid"><div class="ctl"><label>RN / nursing<span class="rowval"><span id="vRnR">0.50</span>× · $<span id="vRnC">120</span>K</span></label><input type="range" id="rnR" min="0.2" max="1" step="0.05" value="0.25"><input type="range" id="rnC" min="80" max="180" step="5" value="120"></div><div class="ctl"><label>BH tech / MA<span class="rowval"><span id="vBhtR">0.80</span>× · $<span id="vBhtC">70</span>K</span></label><input type="range" id="bhtR" min="0.3" max="1.5" step="0.05" value="0.5"><input type="range" id="bhtC" min="50" max="110" step="5" value="70"></div><div class="ctl"><label>Care coord.<span class="rowval"><span id="vCcR">0.30</span>× · $<span id="vCcC">75</span>K</span></label><input type="range" id="ccR" min="0.1" max="0.6" step="0.05" value="0.3"><input type="range" id="ccC" min="50" max="110" step="5" value="75"></div><div class="ctl"><label>Supervisors<span class="rowval"><span id="vSupR">0.12</span>× · $<span id="vSupC">160</span>K</span></label><input type="range" id="supR" min="0.05" max="0.3" step="0.01" value="0.08"><input type="range" id="supC" min="110" max="220" step="5" value="160"></div></div></div><div class="ctlgroup" style="flex:1 1 280px;min-width:240px"><div class="sub">Facility / non-labor cost / visit</div><div class="ctlgrid"><div class="ctl"><label>In-person (B&amp;M+supplies)<span class="rowval" id="vIpFac">$80</span></label><input type="range" id="ipFac" min="40" max="140" step="1" value="80"></div><div class="ctl"><label>Virtual (platform+supplies)<span class="rowval" id="vThFac">$20</span></label><input type="range" id="thFac" min="5" max="50" step="1" value="20"></div></div></div><div class="ctlgroup"><div class="sub">Financing</div><div class="ctlgrid"><div><label class="chk"><input type="checkbox" id="eqOn"> Equity raise</label><div class="ctl"><label>Amount<span class="rowval" id="vEqA">$12.0M</span></label><input type="range" id="eqA" min="5" max="20" step="0.5" value="12"></div><div class="ctl"><label>Close month<span class="rowval" id="vEqM">M9</span></label><input type="range" id="eqM" min="3" max="18" step="1" value="9"></div></div><div><label class="chk"><input type="checkbox" id="dbOn"> Venture debt</label><div class="ctl"><label>Amount<span class="rowval" id="vDbA">$5.0M</span></label><input type="range" id="dbA" min="2" max="10" step="0.5" value="5"></div><div class="ctl"><label>Draw month<span class="rowval" id="vDbM">M6</span></label><input type="range" id="dbM" min="3" max="18" step="1" value="6"></div></div></div><div class="hint" style="margin-top:6px;border-top:1px solid var(--line);padding-top:6px">Fixed: start cash $3.5M · floor $1.5M · raise lead 6 mo · debt 12%/yr.</div></div></div>
 <div class="outwrap">
   <div class="card">
       <h2>Live Outputs — Month 1 run-rate</h2>
       <div class="kpis">
-        <div class="kpi"><div class="l">System-wide sales</div><div class="v" id="kRev">—</div><div class="d" id="kRevD"></div></div>
-        <div class="kpi"><div class="l">Franchisor revenue</div><div class="v" id="kGM">—</div><div class="d" id="kGMD"></div></div>
-        <div class="kpi"><div class="l">Franchisor margin</div><div class="v" id="kLab">—</div><div class="d" id="kLabD"></div></div>
-        <div class="kpi"><div class="l">Franchisor EBITDA</div><div class="v" id="kEb">—</div><div class="d" id="kEbD"></div></div>
+        <div class="kpi"><div class="l">Revenue</div><div class="v" id="kRev">—</div><div class="d" id="kRevD"></div></div>
+        <div class="kpi"><div class="l">Gross margin</div><div class="v" id="kGM">—</div><div class="d" id="kGMD"></div></div>
+        <div class="kpi"><div class="l">Clinical labor</div><div class="v" id="kLab">—</div><div class="d" id="kLabD"></div></div>
+        <div class="kpi"><div class="l">EBITDA</div><div class="v" id="kEb">—</div><div class="d" id="kEbD"></div></div>
       </div>
       <div class="sb">
         <div class="sbcard" id="sbCashout"><div class="l">Cash-out month</div><div class="v" id="kCashout">—</div></div>
-        <div class="sbcard" id="sbRaise"><div class="l">Raise growth capital by</div><div class="v" id="kRaise">—</div></div>
+        <div class="sbcard" id="sbRaise"><div class="l">Raise Series B by</div><div class="v" id="kRaise">—</div></div>
         <div class="sbcard" id="sbNeed"><div class="l">Min capital needed</div><div class="v" id="kNeed">—</div></div>
       </div>
       <div class="sb" style="grid-template-columns:repeat(4,1fr);margin-top:9px"><div class="sbcard"><div class="l">New customers / mo</div><div class="v" id="kNew">—</div></div><div class="sbcard"><div class="l">CAC</div><div class="v" id="kCac">—</div></div><div class="sbcard"><div class="l">LTV : CAC</div><div class="v" id="kLtv">—</div></div><div class="sbcard"><div class="l">CAC payback</div><div class="v" id="kPay">—</div></div></div>
     </div>
   <div class="card">
-      <h2>Franchisor Cash Flow &amp; P&amp;L — Months 0–12 ($000s)</h2>
+      <h2>Cash Flow &amp; Projected P&amp;L — Months 0–12 ($000s)</h2>
       <svg id="chart" viewBox="0 0 720 235" preserveAspectRatio="xMidYMid meet"></svg>
       <div class="legend">
         <span><i style="background:#1F2A44"></i>Ending cash</span>
         <span><i style="background:#2E7D88"></i>Cash before financing</span>
-        <span><i style="background:#c0392b"></i>$0.5M floor</span>
+        <span><i style="background:#c0392b"></i>$1.5M floor</span>
         <span style="color:var(--mut)">markers: cash-out · raise-by · financing</span>
       </div>
-      <div class="pnlhead">Franchisor P&amp;L (same monthly axis)</div>
+      <div class="pnlhead">Projected P&amp;L (same monthly axis)</div>
       <table class="pnl" id="pnlTbl"></table>
       <div class="hint" style="margin-top:6px">Expenses in parentheses. Gross profit = revenue − clinical labor − facility/non-labor; EBITDA = gross profit − corporate opex (HQ) − state market opex.</div>
     </div>
@@ -163,48 +163,48 @@ table th,thead{background:#1b2028}
 <div id="view-econ" class="view">
 <div class="bwrap">
   <div class="card">
-    <h2>Franchisee Unit Economics (per location / yr)</h2>
-    <div class="sb" style="grid-template-columns:repeat(4,1fr)"><div class="sbcard"><div class="l">Avg unit volume</div><div class="v" id="kAuv">—</div></div><div class="sbcard"><div class="l">Franchisee margin</div><div class="v" id="kFmar">—</div></div><div class="sbcard"><div class="l">Investment payback</div><div class="v" id="kPay2">—</div></div><div class="sbcard"><div class="l">Cash-on-cash</div><div class="v" id="kCoc">—</div></div></div>
-    <table class="bm" id="unitTbl" style="margin-top:10px"></table>
-    <div class="hint" style="margin-top:6px">What a single franchised location earns after paying the franchisor. Fast payback and high cash-on-cash are what attract franchisees and fuel system growth.</div>
-  </div>
-  <div class="card">
     <h2>Unit Economics Over Time</h2>
-    <div class="hint" style="margin-bottom:4px">In-center net revenue and contribution per visit at the unit (franchisee) level. Months 1–12.</div>
+    <div class="hint" style="margin-bottom:4px">Per-visit economics by modality, and company EBITDA per visit (operating leverage as fixed corporate cost spreads over volume). Months 1–12.</div>
     <svg id="econChart" viewBox="0 0 900 250" preserveAspectRatio="xMidYMid meet"></svg>
     <div class="legend">
-      <span><i style="background:#1F2A44"></i>Net revenue / visit</span>
-      <span><i style="background:#2E7D88"></i>Contribution / visit</span>
+      <span><i style="background:#1F2A44"></i>In-clinic contribution / visit</span>
+      <span><i style="background:#2E7D88"></i>Virtual contribution / visit</span>
+      <span><i style="background:#9C6500"></i>Company EBITDA / visit</span>
     </div>
     <div class="hint" id="econNote" style="margin-top:8px"></div>
   </div>
-  <div style="margin-top:16px">
+  <div class="grid2" style="margin-top:16px">
     <div class="card">
-      <h2>In-center economics (per visit)</h2>
-      <div class="hint" style="margin-bottom:2px">All visits are in-center (cash-pay). Net revenue per visit, less provider labor and supplies, gives contribution per visit.</div>
+      <h2>Virtual (Rx) economics</h2>
+      <div class="hint" style="margin-bottom:2px">Virtual visits — lower reimbursement, but higher throughput and no facility cost.</div>
+      <table class="bm" id="thTbl"></table>
+    </div>
+    <div class="card">
+      <h2>In-clinic economics</h2>
+      <div class="hint" style="margin-bottom:2px">In-person visits — higher reimbursement, but lower throughput and brick-and-mortar cost.</div>
       <table class="bm" id="ipTbl"></table>
     </div>
   </div>
-  <div class="card" style="margin-top:16px"><h2>Consumer Acquisition — system (funded by ad fund)</h2><div class="hint" style="margin-bottom:6px">The national ad fund buys new customers at CAC across the whole system; LTV = blended ticket × visits/yr × lifetime × unit gross margin. Months 1–12.</div><div class="grid2"><div><table class="bm" id="cacTbl"></table></div><div><div style="font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:4px">New customers / mo &amp; cumulative</div><svg id="cacChart" viewBox="0 0 900 190" preserveAspectRatio="xMidYMid meet"></svg><div class="legend"><span><i style="background:#2E7D88"></i>New customers / mo</span><span><i style="background:#1F2A44"></i>Cumulative customers</span></div></div></div></div>
+  <div class="card" style="margin-top:16px"><h2>Customer Acquisition — CAC &amp; LTV</h2><div class="hint" style="margin-bottom:6px">DTC funnel: marketing buys new customers at CAC; LTV = blended ticket × visits/yr × lifetime × gross margin. Months 1–12.</div><div class="grid2"><div><table class="bm" id="cacTbl"></table></div><div><div style="font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:4px">New customers / mo &amp; cumulative</div><svg id="cacChart" viewBox="0 0 900 190" preserveAspectRatio="xMidYMid meet"></svg><div class="legend"><span><i style="background:#2E7D88"></i>New customers / mo</span><span><i style="background:#1F2A44"></i>Cumulative customers</span></div></div></div></div>
 </div>
 </div>
 
 <div id="view-state" class="view">
 <div class="bwrap">
   <div class="card">
-    <h2>System P&amp;L by State</h2>
+    <h2>Trended P&amp;L by Site</h2>
     <div class="seg" id="stateSeg">
-      <button class="segbtn active" data-metric="rev">System sales</button>
-      <button class="segbtn" data-metric="gp">Royalty rev</button>
-      <button class="segbtn" data-metric="ebitda">Contribution</button>
+      <button class="segbtn active" data-metric="rev">Revenue</button>
+      <button class="segbtn" data-metric="gp">Gross profit</button>
+      <button class="segbtn" data-metric="ebitda">EBITDA</button>
     </div>
     <svg id="stateChart" viewBox="0 0 900 250" preserveAspectRatio="xMidYMid meet"></svg>
     <div class="legend" id="stateLegend"></div>
-    <div class="pnlhead" style="margin-top:14px">Ramp to profitability by state</div>
+    <div class="pnlhead" style="margin-top:14px">Ramp to profitability by site</div>
     <table class="bm" id="stateBE"></table>
     <div class="pnlhead" style="margin-top:14px">Monthly detail</div>
     <div class="scrollx"><table class="pnl" id="stateTbl"></table></div>
-    <div class="hint" style="margin-top:8px">$000s by state over <b>Months 1–24</b> (full ramp). Existing markets are profitable from the start; a new market runs at a loss through its ramp — it carries entry cost, fixed market overhead (VP, RCM, ops) and an allocation of corporate opex — then reaches breakeven as volume builds. State EBITDA is fully loaded; corporate opex is allocated by revenue share.</div>
+    <div class="hint" style="margin-top:8px">$000s by site over <b>Months 1–24</b> (full ramp). Existing markets are profitable from the start; a new market runs at a loss through its ramp — it carries entry cost, fixed market overhead (VP, RCM, ops) and an allocation of corporate opex — then reaches breakeven as volume builds. State EBITDA is fully loaded; corporate opex is allocated by revenue share.</div>
   </div>
 </div>
 </div>
@@ -213,7 +213,7 @@ table th,thead{background:#1b2028}
 <div class="bwrap">
   <div class="card">
     <h2>Benchmarks vs. Public Comparables</h2>
-    <div class="hint" style="margin-bottom:6px">How this med-spa <b>franchisor</b> model compares to publicly traded franchise businesses (FY2025). Med-spa franchisors are mostly private, so these asset-light, royalty-driven franchisors are the closest public proxies — <b>European Wax Center</b> (beauty franchising) is the nearest structural match. Franchisor margins are high because revenue is royalties + fees, not unit operations. The <b>GlowMD (this model)</b> row updates live. "Rule of 40" = revenue growth % + EBITDA margin %.</div>
+    <div class="hint" style="margin-bottom:6px">How this DTC med-spa model's unit economics stack up against publicly traded consumer-health / DTC telehealth companies (FY2025). Med-spa pure-plays are largely private, so these cash-pay, brand-driven comps are the closest public proxies — <b>Hims &amp; Hers</b> is the nearest structural match. The <b>GlowMD (this model)</b> row updates live. "Rule of 40" = revenue growth % + EBITDA margin %.</div>
     <div class="scrollx"><table class="bm" id="bmTbl"></table></div>
     <div class="hint" style="margin-top:8px">Revenue in $M (FY2025). LifeStance "center margin" used as gross-margin proxy; Teladoc gross margin n/a. GlowMD revenue is the model's annualized Year-1 run-rate; figures illustrative.</div>
   </div>
@@ -234,31 +234,30 @@ table th,thead{background:#1b2028}
   <div class="card" style="margin-top:16px">
     <h2>Sources</h2>
     <div class="hint" style="font-size:11.5px;line-height:1.7">
-      European Wax Center (EWCZ) FY2025: franchisor revenue $207M, −4.7%; system-wide sales $947M; adj. EBITDA margin 28.1%; 1,047 centers (announced go-private).<br>
-      Xponential Fitness (XPOF) FY2025: revenue $315M, −2%; adj. EBITDA margin 35.5%; ~3,100 studios.<br>
-      Planet Fitness (PLNT) FY2025: revenue ~$1,324M, ~+11%; adj. EBITDA margin ~40%; system-wide sales ~$5.3B; ~2,800 clubs.<br>
-      Wingstop (WING) FY2025: revenue ~$700M, ~+16%; adj. EBITDA ~$244M (~35% margin); 3,056 restaurants — asset-light exemplar.<br>
-      Franchisor revenue = royalties + fees (not system-wide sales). EV/Revenue multiples ~June 2026 are approximate, point-in-time. GlowMD is illustrative.
+      Hims &amp; Hers (HIMS) FY2025: rev $2,348M, +59%; gross margin 74%; adj. EBITDA 13.5%; ≈2.5x rev.<br>
+      Talkspace (TALK) FY2025: rev ~$228M, ~+22%; gross margin ~45%; adj. EBITDA ~4%; ≈2.0x rev.<br>
+      Teladoc (TDOC) FY2025: rev $2,530M, −2%; adj. EBITDA 11.1%; forward P/S ~0.4x.<br>
+      Med-spa pure-plays are largely private; these DTC/consumer-health names are used as public proxies.<br>
+      Peer financials from FY2025 earnings releases / SEC filings; multiples ~June 2026, point-in-time. GlowMD is illustrative.
     </div>
   </div>
 </div>
 </div>
 
 <div id="toast" class="toast">Link copied to clipboard</div>
-<div class="foot">Illustrative company and figures. Model logic mirrors the delivered Excel workbook (Franchise dev → Royalties → Unit economics → Financing). Benchmark peers are real public companies; figures are point-in-time.</div>
+<div class="foot">Illustrative company and figures. Model logic mirrors the delivered Excel workbook (Sites → Labor → CAC → Financing). Benchmark peers are real public companies; figures are point-in-time.</div>
 
 <script>
-var STATES=[{name:"Arizona"},{name:"Texas"},{name:"Florida"},{name:"California"},{name:"Georgia"},{name:"Colorado"},{name:"Nevada"},{name:"N. Carolina"}];
-var STCOL=["#1F2A44","#2E7D88","#3A9AA8","#9C6500","#7a4fb0","#c0392b","#2d8f5a","#b07a1f"];
+var STATES=[{name:"Scottsdale"},{name:"Dallas"},{name:"Miami"},{name:"Austin"},{name:"Nashville"}];
+var STCOL=["#1F2A44","#2E7D88","#3A9AA8","#9C6500","#7a4fb0"];
 var RPV_BASE=382, WD=21, HRS=2080, CN=12;
-var CASH0=4000, OPEX0=280, OPEXG=0.012, CAPEX=15, WC=10, MINC=2000, LEAD=6, DBRATE=0.12, NM=24;
+var CASH0=2000, OPEX0=70, OPEXG=0.015, CAPEX=25, WC=10, MINC=1000, LEAD=6, DBRATE=0.12, NM=24;
 var COMPS=[
-  {n:"European Wax Center (EWCZ)",short:"EWC",p:"Beauty / waxing franchise",rev:207,g:-0.047,gm:null,eb:0.281,ps:2.5},
-  {n:"Xponential Fitness (XPOF)",short:"Xponential",p:"Boutique fitness franchise",rev:315,g:-0.02,gm:null,eb:0.355,ps:3.0},
-  {n:"Planet Fitness (PLNT)",short:"Planet Fitness",p:"Fitness franchise + corporate",rev:1324,g:0.11,gm:null,eb:0.40,ps:7.0},
-  {n:"Wingstop (WING)",short:"Wingstop",p:"Restaurant franchise (asset-light)",rev:700,g:0.16,gm:null,eb:0.35,ps:12.0}
+  {n:"Hims & Hers (HIMS)",short:"Hims & Hers",p:"DTC telehealth / wellness",rev:2348,g:0.59,gm:0.74,eb:0.135,ps:2.5},
+  {n:"Talkspace (TALK)",short:"Talkspace",p:"DTC behavioral telehealth",rev:228,g:0.22,gm:0.45,eb:0.04,ps:2.0},
+  {n:"Teladoc Health (TDOC)",short:"Teladoc",p:"Diversified telehealth",rev:2530,g:-0.02,gm:null,eb:0.111,ps:0.4}
 ];
-var CTRLS=["s0_on","s0_lm","s0_r0","s0_g","s0_fx","s1_on","s1_lm","s1_r0","s1_g","s1_fx","s2_on","s2_lm","s2_r0","s2_g","s2_fx","s3_on","s3_lm","s3_r0","s3_g","s3_fx","s4_on","s4_lm","s4_r0","s4_g","s4_fx","s5_on","s5_lm","s5_r0","s5_g","s5_fx","s6_on","s6_lm","s6_r0","s6_g","s6_fx","s7_on","s7_lm","s7_r0","s7_g","s7_fx","roy","adf","ffee","sss","devU","occ","bld","rpvIP","cac","visitsYr","lifeYrs","util","ipcRate","ipcDay","rnR","rnC","bhtR","bhtC","ccR","ccC","supR","supC","ipFac","eqOn","eqA","eqM","dbOn","dbA","dbM"];
+var CTRLS=["s0_on","s0_lm","s0_r0","s0_g","s0_fx","s0_en","s1_on","s1_lm","s1_r0","s1_g","s1_fx","s1_en","s2_on","s2_lm","s2_r0","s2_g","s2_fx","s2_en","s3_on","s3_lm","s3_r0","s3_g","s3_fx","s3_en","s4_on","s4_lm","s4_r0","s4_g","s4_fx","s4_en","rpvIP","rpvVirt","mktPct","cac","visitsYr","lifeYrs","th","util","ipcRate","thcRate","ipcDay","thcDay","rnR","rnC","bhtR","bhtC","ccR","ccC","supR","supC","ipFac","thFac","eqOn","eqA","eqM","dbOn","dbA","dbM"];
 var stateMetric="rev";
 function $(id){return document.getElementById(id);}
 function f0(n){return Math.round(n).toLocaleString();}
@@ -276,46 +275,44 @@ function toast(m){var t=$("toast");t.textContent=m;t.className="toast show";setT
 function copyLink(){var p=new URLSearchParams(getState());var url=location.origin+location.pathname+"?"+p.toString();try{navigator.clipboard.writeText(url).then(function(){toast("Link copied — opens with these exact assumptions");},function(){toast("URL is in the address bar");});}catch(e){toast("URL is in the address bar");}}
 
 function readControls(){
-  var states=[],si;for(si=0;si<STATES.length;si++){states.push({name:STATES[si].name,on:$("s"+si+"_on").checked,launch:gv("s"+si+"_lm"),fac:gv("s"+si+"_r0"),revPer:gv("s"+si+"_g"),fixed:gv("s"+si+"_fx")});}
-  return {states:states,royalty:gv("roy")/100,adFund:gv("adf")/100,franFee:gv("ffee"),sss:gv("sss")/100,devPU:gv("devU"),occPct:gv("occ")/100,buildCost:gv("bld"),
-    rpvIP:gv("rpvIP"),cac:gv("cac"),visitsYr:gv("visitsYr"),lifeYrs:gv("lifeYrs"),th:0,util:+$("util").value/100,
-    ipcRate:+$("ipcRate").value,ipcDay:+$("ipcDay").value,
+  var states=[],si;for(si=0;si<5;si++){states.push({name:STATES[si].name,on:$("s"+si+"_on").checked,launch:gv("s"+si+"_lm"),rev0:gv("s"+si+"_r0"),g:gv("s"+si+"_g")/100,fixed:gv("s"+si+"_fx"),entry:gv("s"+si+"_en")});}
+  return {states:states,rpvIP:gv("rpvIP"),rpvVirt:gv("rpvVirt"),mktPct:gv("mktPct")/100,cac:gv("cac"),visitsYr:gv("visitsYr"),lifeYrs:gv("lifeYrs"),th:+$("th").value/100,util:+$("util").value/100,
+    ipcRate:+$("ipcRate").value,thcRate:+$("thcRate").value,ipcDay:+$("ipcDay").value,thcDay:+$("thcDay").value,
     rnR:+$("rnR").value,rnC:+$("rnC").value,bhtR:+$("bhtR").value,bhtC:+$("bhtC").value,ccR:+$("ccR").value,ccC:+$("ccC").value,supR:+$("supR").value,supC:+$("supC").value,
-    ipFac:+$("ipFac").value,
+    ipFac:+$("ipFac").value,thFac:+$("thFac").value,
     eqOn:$("eqOn").checked,eqA:+$("eqA").value*1000,eqM:+$("eqM").value,dbOn:$("dbOn").checked,dbA:+$("dbA").value*1000,dbM:+$("dbM").value};
 }
 function stMonth(sp,t,c){
-  if(!sp.on||t<sp.launch)return {sales:0,units:0,newUnits:0,visits:0,ipv:0,thv:0,ipc:0,thc:0,rn:0,bht:0,cc:0,sup:0,ipLA:0,thLA:0,labor:0,nonlabor:0,royalty:0,adfund:0,fee:0,fixed:0};
-  var revPer=sp.revPer*Math.pow(1+c.sss,t-sp.launch), sales=sp.fac*revPer;
-  var units=sp.fac, newUnits=(t===sp.launch)?sp.fac:0;
-  var visits=sales*1000/c.rpvIP, ipv=visits;
-  var ipc=ipv/(WD*c.util*c.ipcDay);
-  var rn=ipc*c.rnR, bht=ipc*c.bhtR, cc=ipc*c.ccR, sup=ipc*c.supR;
-  var ipLA=ipc*c.ipcRate*HRS+bht*c.bhtC*1000+rn*c.rnC*1000+cc*c.ccC*1000+sup*c.supC*1000;
-  var labor=ipLA/12/1000, nonlabor=ipv*c.ipFac/1000;
-  var royalty=c.royalty*sales, adfund=c.adFund*sales, fee=c.franFee*newUnits;
-  return {sales:sales,units:units,newUnits:newUnits,visits:visits,ipv:ipv,thv:0,ipc:ipc,thc:0,rn:rn,bht:bht,cc:cc,sup:sup,ipLA:ipLA,thLA:0,labor:labor,nonlabor:nonlabor,royalty:royalty,adfund:adfund,fee:fee,fixed:sp.fixed};
+  if(!sp.on||t<sp.launch)return {rev:0,visits:0,ipv:0,thv:0,ipc:0,thc:0,rn:0,bht:0,cc:0,sup:0,ipLA:0,thLA:0,labor:0,nonlabor:0,gp:0,fixed:0,entry:0};
+  var baseRev=sp.rev0*Math.pow(1+sp.g,t-sp.launch), visits=baseRev*1000/RPV_BASE;
+  var ipv=visits*(1-c.th), thv=visits*c.th;
+  var ipc=ipv/(WD*c.util*c.ipcDay), thc=thv/(WD*c.util*c.thcDay);
+  var rn=(ipc+thc)*c.rnR, bht=ipc*c.bhtR, cc=(ipc+thc)*c.ccR, sup=(ipc+thc)*c.supR;
+  var sharedA=rn*c.rnC*1000+cc*c.ccC*1000+sup*c.supC*1000, clin=ipc+thc;
+  var ipS=clin>0?ipc/clin:0, thS=clin>0?thc/clin:0;
+  var ipLA=ipc*c.ipcRate*HRS+bht*c.bhtC*1000+sharedA*ipS, thLA=thc*c.thcRate*HRS+sharedA*thS;
+  var labor=(ipLA+thLA)/12/1000, nonlabor=(ipv*c.ipFac+thv*c.thFac)/1000, rev=(ipv*c.rpvIP+thv*c.rpvVirt)/1000;
+  var fixed=sp.fixed, entry=(t===sp.launch)?sp.entry:0;
+  return {rev:rev,visits:visits,ipv:ipv,thv:thv,ipc:ipc,thc:thc,rn:rn,bht:bht,cc:cc,sup:sup,ipLA:ipLA,thLA:thLA,labor:labor,nonlabor:nonlabor,gp:rev-labor-nonlabor,fixed:fixed,entry:entry};
 }
 function model(c){
   var end=[CASH0],bef=[CASH0],cashE=CASH0,cashB=CASH0,rows=[],cashout=null,t,i;
   for(t=1;t<=NM;t++){
-    var sm=[],sys=0,units=0,newU=0,royalty=0,adfund=0,fee=0,fixedTot=0,labor=0,nonlabor=0,ipv=0,ipLA=0,ipc=0,rn=0,bht=0,cc=0,sup=0;
+    var sm=[],rev=0,labor=0,nonlabor=0,gp=0,fixed=0,entry=0,ipv=0,thv=0,ipLA=0,thLA=0,ipc=0,thc=0,rn=0,bht=0,cc=0,sup=0;
     for(i=0;i<STATES.length;i++){var m=stMonth(c.states[i],t,c);sm.push(m);
-      sys+=m.sales;units+=m.units;newU+=m.newUnits;royalty+=m.royalty;adfund+=m.adfund;fee+=m.fee;fixedTot+=m.fixed;
-      labor+=m.labor;nonlabor+=m.nonlabor;ipv+=m.ipv;ipLA+=m.ipLA;ipc+=m.ipc;rn+=m.rn;bht+=m.bht;cc+=m.cc;sup+=m.sup;}
-    var corp=OPEX0*Math.pow(1+OPEXG,t), dev=c.devPU*newU;
-    var frRev=royalty+fee, frOpex=corp+fixedTot+dev, ebitda=frRev-frOpex;
-    var ipRev=ipv*c.rpvIP/1000, ipLab=ipLA/12/1000, ipNon=ipv*c.ipFac/1000;
-    var mod={ip:{rev:ipRev,labor:ipLab,non:ipNon,contrib:ipRev-ipLab-ipNon,visits:ipv},th:{rev:0,labor:0,non:0,contrib:0,visits:0}};
-    var states=[];for(i=0;i<STATES.length;i++){var alloc=sys>0?sm[i].sales/sys:0;
-      states.push({name:STATES[i].name,rev:sm[i].sales,gp:sm[i].royalty,ebitda:(sm[i].royalty+sm[i].fee)-sm[i].fixed-(corp+dev)*alloc,units:sm[i].units});}
-    var newCust=c.cac>0?adfund*1000/c.cac:0;
-    var interest=(c.dbOn&&t>=c.dbM)?c.dbA*DBRATE/12:0, opcf=ebitda-CAPEX-WC;
+      rev+=m.rev;labor+=m.labor;nonlabor+=m.nonlabor;gp+=m.gp;fixed+=m.fixed;entry+=m.entry;
+      ipv+=m.ipv;thv+=m.thv;ipLA+=m.ipLA;thLA+=m.thLA;ipc+=m.ipc;thc+=m.thc;rn+=m.rn;bht+=m.bht;cc+=m.cc;sup+=m.sup;}
+    var corp=OPEX0*Math.pow(1+OPEXG,t), mkt=c.mktPct*rev, ebitda=gp-corp-fixed-mkt; var newCust=c.cac>0?mkt*1000/c.cac:0;
+    var ipRev=ipv*c.rpvIP/1000, thRev=thv*c.rpvVirt/1000, ipLab=ipLA/12/1000, thLab=thLA/12/1000, ipNon=ipv*c.ipFac/1000, thNon=thv*c.thFac/1000;
+    var mod={ip:{rev:ipRev,labor:ipLab,non:ipNon,contrib:ipRev-ipLab-ipNon,visits:ipv},th:{rev:thRev,labor:thLab,non:thNon,contrib:thRev-thLab-thNon,visits:thv}};
+    var states=[];for(i=0;i<STATES.length;i++){var alloc=rev>0?sm[i].rev/rev:0;
+      states.push({name:STATES[i].name,rev:sm[i].rev,gp:sm[i].gp,ebitda:sm[i].gp-sm[i].fixed-(corp+mkt)*alloc});}
+    var interest=(c.dbOn&&t>=c.dbM)?c.dbA*DBRATE/12:0, opcf=ebitda-CAPEX-entry-WC;
     var eqin=(c.eqOn&&t===c.eqM)?c.eqA:0, dbin=(c.dbOn&&t===c.dbM)?c.dbA:0, ncf=opcf-interest+eqin+dbin;
     cashB+=opcf;cashE+=ncf;bef.push(cashB);end.push(cashE);
     if(cashout===null&&cashB<MINC)cashout=t;
-    rows.push({t:t,systemSales:sys,units:units,newUnits:newU,rev:frRev,royalty:royalty,fee:fee,adfund:adfund,corp:corp,statefixed:fixedTot,dev:dev,marketing:adfund,newCust:newCust,labor:labor,nonlabor:nonlabor,gp:frRev,ebitda:ebitda,opcf:opcf,ncf:ncf,cashB:cashB,cashE:cashE,
-      visits:ipv,mod:mod,states:states,fte:{ipc:ipc,thc:0,rn:rn,bht:bht,cc:cc,sup:sup,total:ipc+rn+bht+cc+sup,cost:labor}});
+    rows.push({t:t,rev:rev,labor:labor,nonlabor:nonlabor,gp:gp,corp:corp,fixed:fixed,marketing:mkt,newCust:newCust,ebitda:ebitda,opcf:opcf,ncf:ncf,cashB:cashB,cashE:cashE,
+      visits:ipv+thv,mod:mod,states:states,fte:{ipc:ipc,thc:thc,rn:rn,bht:bht,cc:cc,sup:sup,total:ipc+thc+rn+bht+cc+sup,cost:labor}});
   }
   var minBef=Math.min.apply(null,bef.slice(1));
   return {rows:rows,end:end,bef:bef,cashout:cashout,minBef:minBef,capNeed:Math.max(0,MINC-minBef),
@@ -339,10 +336,10 @@ function chart(M,c){
 }
 function pnlTable(M){
   var R=M.rows,m=12,i,d;
-  var defs=[{l:"Royalty revenue",f:function(r){return r.royalty;}},{l:"Franchise fees",f:function(r){return r.fee;}},
-    {l:"Franchisor revenue",f:function(r){return r.rev;},tot:1},
-    {l:"Corporate G&A",f:function(r){return -r.corp;}},{l:"State fixed costs",f:function(r){return -r.statefixed;}},
-    {l:"Franchise development",f:function(r){return -r.dev;}},{l:"Franchisor EBITDA",f:function(r){return r.ebitda;},tot:1},
+  var defs=[{l:"Revenue",f:function(r){return r.rev;}},{l:"Provider labor",f:function(r){return -r.labor;}},
+    {l:"Facility / supplies",f:function(r){return -r.nonlabor;}},{l:"Gross profit",f:function(r){return r.gp;},tot:1},
+    {l:"Gross margin %",mar:function(r){return r.gp;}},{l:"Corporate opex (HQ)",f:function(r){return -r.corp;}},
+    {l:"Site operating opex",f:function(r){return -r.fixed;}},{l:"Marketing (S&M)",f:function(r){return -r.marketing;}},{l:"EBITDA",f:function(r){return r.ebitda;},tot:1},
     {l:"EBITDA margin %",mar:function(r){return r.ebitda;}}];
   var head='<thead><tr><th>$000s</th>';for(i=0;i<m;i++)head+='<th>M'+(i+1)+'</th>';head+='<th class="yr">Yr 1</th></tr></thead>';
   var b='<tbody>';for(d=0;d<defs.length;d++){var D=defs[d],cls=D.tot?'tot':(D.mar?'mar':'');b+='<tr class="'+cls+'"><td>'+D.l+'</td>';
@@ -353,6 +350,7 @@ function pnlTable(M){
 function laborTable(M){
   var R=M.rows,m=12,i,d;
   var defs=[{l:"Injectors (NP/RN)",f:function(r){return r.fte.ipc;}},
+    {l:"Telehealth providers",f:function(r){return r.fte.thc;}},
     {l:"RN / clinical",f:function(r){return r.fte.rn;}},
     {l:"Aestheticians / MA",f:function(r){return r.fte.bht;}},
     {l:"Front desk / coord.",f:function(r){return r.fte.cc;}},
@@ -369,23 +367,23 @@ function laborTable(M){
   multiLine("laborChart",[{color:"#1F2A44",vals:lc}],12,function(v){return f0(v);},150);
 }
 function kpis(c,M){
-  var m=M.m1, sysAnn=m.systemSales*12, frMar=m.rev?m.ebitda/m.rev:0;
-  $("kRev").textContent="$"+(sysAnn/1000).toFixed(1)+"M";$("kRevD").innerHTML='<span style="color:var(--mut)">'+f0(m.units)+' facilities open</span>';
-  $("kGM").textContent="$"+f0(m.rev)+"K";$("kGMD").innerHTML='<span style="color:var(--mut)">royalty + fees / mo</span>';
-  $("kLab").textContent=pct(frMar);$("kLabD").innerHTML='<span class="'+(frMar>=0?'up':'down')+'">franchisor margin</span>';
-  $("kEb").textContent=(m.ebitda>=0?"$":"−$")+f0(Math.abs(m.ebitda))+"K";$("kEbD").innerHTML=m.ebitda>=0?'<span class="up">positive</span>':'<span class="down">investing</span>';
+  var m=M.m1,gm=m.gp/m.rev,eb=m.ebitda;
+  $("kRev").textContent="$"+f0(m.rev)+"K";$("kRevD").innerHTML=(c.states[3].on||c.states[4].on)?'<span class="up">expansion on</span>':'<span style="color:var(--mut)">core only</span>';
+  $("kGM").textContent=pct(gm);$("kGMD").innerHTML='<span class="'+(gm>=0.33?'up':'down')+'">pricing/labor-driven</span>';
+  $("kLab").textContent="$"+f0(m.labor)+"K";$("kLabD").innerHTML='<span style="color:var(--mut)">'+m.fte.total.toFixed(0)+' FTE</span>';
+  $("kEb").textContent=(eb>=0?"$":"−$")+f0(Math.abs(eb))+"K";$("kEbD").innerHTML=eb>=0?'<span class="up">positive</span>':'<span class="down">investing</span>';
   var co=$("sbCashout"),rs=$("sbRaise"),nd=$("sbNeed");
   if(M.cashout){co.className="sbcard alert";rs.className="sbcard alert";nd.className="sbcard alert";$("kCashout").textContent="M"+M.cashout;$("kRaise").textContent="M"+M.raiseby;$("kNeed").textContent="$"+(M.capNeed/1000).toFixed(1)+"M";}
   else{co.className="sbcard ok";rs.className="sbcard ok";nd.className="sbcard ok";$("kCashout").textContent="24+";$("kRaise").textContent="—";$("kNeed").textContent="$0";}
 }
-function nsFromModel(M){var R=M.rows,sr=0,i;for(i=0;i<12;i++)sr+=R[i].rev;return {gm:null,eb:M.m1.ebitda/M.m1.rev,rev:sr/1000,g:Math.pow(R[11].rev/R[0].rev,12/11)-1};}
+function nsFromModel(M){var R=M.rows,sr=0,i;for(i=0;i<12;i++)sr+=R[i].rev;return {gm:M.m1.gp/M.m1.rev,eb:M.m1.ebitda/M.m1.rev,rev:sr/1000,g:Math.pow(R[11].rev/R[0].rev,12/11)-1};}
 function ro40(g,eb){return (g+eb)*100;} function ro40b(v){return '<span class="b40 '+(v>=40?'pass':'fail')+'">'+v.toFixed(0)+'</span>';}
 function benchTable(ns){
   var head='<thead><tr><th>Company</th><th>Profile</th><th>Revenue (FY25)</th><th>Rev growth</th><th>Gross margin</th><th>Adj. EBITDA margin</th><th>Rule of 40</th></tr></thead>';
-  var b='<tbody><tr class="me"><td>GlowMD (this model)</td><td>Illustrative med-spa franchisor (royalties + fees)</td><td>$'+Math.round(ns.rev).toLocaleString()+'M</td><td>'+pct0(ns.g)+'</td><td>'+(ns.gm==null?'n/a':pct(ns.gm))+'</td><td>'+pct(ns.eb)+'</td><td>'+ro40b(ro40(ns.g,ns.eb))+'</td></tr>';
+  var b='<tbody><tr class="me"><td>GlowMD (this model)</td><td>Illustrative DTC med spa (cash-pay)</td><td>$'+Math.round(ns.rev).toLocaleString()+'M</td><td>'+pct0(ns.g)+'</td><td>'+pct(ns.gm)+'</td><td>'+pct(ns.eb)+'</td><td>'+ro40b(ro40(ns.g,ns.eb))+'</td></tr>';
   var i,cp;for(i=0;i<COMPS.length;i++){cp=COMPS[i];b+='<tr><td>'+cp.n+'</td><td>'+cp.p+'</td><td>$'+cp.rev.toLocaleString()+'M</td><td>'+pct0(cp.g)+'</td><td>'+(cp.gm==null?'n/a':pct(cp.gm))+'</td><td>'+pct(cp.eb)+'</td><td>'+ro40b(ro40(cp.g,cp.eb))+'</td></tr>';}
   var gms=COMPS.filter(function(x){return x.gm!=null;}).map(function(x){return x.gm;}),ebs=COMPS.map(function(x){return x.eb;}),gs=COMPS.map(function(x){return x.g;}),r4=COMPS.map(function(x){return ro40(x.g,x.eb);});
-  b+='<tr class="med"><td>Peer median</td><td></td><td></td><td>'+pct0(median(gs))+'</td><td>'+(gms.length?pct(median(gms)):'n/a')+'</td><td>'+pct(median(ebs))+'</td><td>'+median(r4).toFixed(0)+'</td></tr>';
+  b+='<tr class="med"><td>Peer median</td><td></td><td></td><td>'+pct0(median(gs))+'</td><td>'+pct(median(gms))+'</td><td>'+pct(median(ebs))+'</td><td>'+median(r4).toFixed(0)+'</td></tr>';
   $("bmTbl").innerHTML=head+b+'</tbody>';
 }
 function renderBars(id,key,nsVal){
@@ -396,7 +394,7 @@ function renderBars(id,key,nsVal){
 }
 function renderVal(ns,M,c){
   var ms=COMPS.map(function(x){return x.ps;}),lo=Math.min.apply(null,ms),hi=Math.max.apply(null,ms),md=median(ms),revM=ns.rev,raiseM=c.eqOn?(c.eqA/1000):(M.capNeed/1000);
-  var cs=[["Low ("+lo.toFixed(1)+"x · EWCZ)",lo],["Median ("+md.toFixed(1)+"x)",md],["High ("+hi.toFixed(1)+"x · WING)",hi]];
+  var cs=[["Low ("+lo.toFixed(1)+"x · TDOC)",lo],["Median ("+md.toFixed(1)+"x)",md],["High ("+hi.toFixed(1)+"x · HIMS)",hi]];
   var head='<thead><tr><th>Valuation case</th><th>EV/Revenue</th><th>Implied pre-money</th><th>Post-money</th><th>Dilution at $'+raiseM.toFixed(1)+'M</th></tr></thead>',b='<tbody>',i;
   for(i=0;i<cs.length;i++){var pre=revM*cs[i][1],post=pre+raiseM,dil=raiseM>0?raiseM/post:0;b+='<tr'+(i===1?' class="me"':'')+'><td>'+cs[i][0]+'</td><td>'+cs[i][1].toFixed(1)+'x</td><td>$'+Math.round(pre).toLocaleString()+'M</td><td>$'+Math.round(post).toLocaleString()+'M</td><td>'+(raiseM>0?pct(dil):'—')+'</td></tr>';}
   $("valTbl").innerHTML=head+b+'</tbody>';var preMed=revM*md;
@@ -426,24 +424,24 @@ function econTbl(id,key,M){
   $(id).innerHTML=head+b;
 }
 function renderEcon(M){
-  var R=M.rows,rvv=[],con=[],i;
-  for(i=0;i<12;i++){var d=R[i].mod.ip,v=d.visits||1;rvv.push(d.rev*1000/v);con.push(d.contrib*1000/v);}
-  multiLine("econChart",[{color:"#1F2A44",vals:rvv},{color:"#2E7D88",vals:con}],12,function(v){return usd(v);},250);
-  econTbl("ipTbl","ip",M);
-  var c1=con[0],c12=con[11];
-  $("econNote").innerHTML="In-center per-visit economics (cash-pay). Net revenue/visit less provider labor and supplies gives <b>contribution/visit of "+usd(c1)+"–"+usd(c12)+"</b>. What the franchisee keeps after royalty, ad fund and occupancy is in the unit P&L above.";
+  var R=M.rows,ip=[],th=[],eb=[],i;
+  for(i=0;i<12;i++){var r=R[i];ip.push(r.mod.ip.visits?r.mod.ip.contrib*1000/r.mod.ip.visits:0);th.push(r.mod.th.visits?r.mod.th.contrib*1000/r.mod.th.visits:0);eb.push(r.visits?r.ebitda*1000/r.visits:0);}
+  multiLine("econChart",[{color:"#1F2A44",vals:ip},{color:"#2E7D88",vals:th},{color:"#9C6500",vals:eb}],12,function(v){return usd(v);},250);
+  econTbl("thTbl","th",M);econTbl("ipTbl","ip",M);
+  var e1=eb[0],e12=eb[11];
+  $("econNote").innerHTML="Contribution/visit is roughly stable (rates &amp; productivity fixed), but <b>company EBITDA/visit rises from "+usd(e1)+" to "+usd(e12)+"</b> over the year as fixed corporate cost spreads across growing volume — operating leverage. Telehealth carries lower revenue/visit but also lower cost/visit (no facility, higher throughput).";
 }
 function stateColor(i){return STCOL[i%STCOL.length];}
 function renderState(M){
-  var R=M.rows,n=STATES.length,i,t,NMx=R.length,lab=stateMetric==="rev"?"System sales":(stateMetric==="gp"?"Royalty revenue":"Franchisor contribution");
+  var R=M.rows,n=STATES.length,i,t,NMx=R.length,lab=stateMetric==="rev"?"Revenue":(stateMetric==="gp"?"Gross profit":"EBITDA");
   var series=[];for(i=0;i<n;i++){var vals=[];for(t=0;t<NMx;t++)vals.push(R[t].states[i][stateMetric]);series.push({color:stateColor(i),vals:vals});}
   multiLine("stateChart",series,NMx,function(v){return f0(v);},250);
   var leg="";for(i=0;i<n;i++)leg+='<span><i style="background:'+stateColor(i)+'"></i>'+STATES[i].name+'</span>';
   $("stateLegend").innerHTML=leg;
-  var be='<thead><tr><th>State</th><th>Facilities</th><th>Yr 1 contribution</th><th>Yr 2 contribution</th></tr></thead><tbody>';
-  for(i=0;i<n;i++){var y1=0,y2=0,fac=R[NMx-1].states[i].units;
-    for(t=0;t<NMx;t++){var st=R[t].states[i];if(t<12)y1+=st.ebitda;else y2+=st.ebitda;}
-    be+='<tr><td>'+STATES[i].name+'</td><td>'+f0(fac)+'</td><td>'+fmt(y1)+'</td><td>'+fmt(y2)+'</td></tr>';}
+  var be='<thead><tr><th>State</th><th>Breakeven month</th><th>Yr 1 EBITDA</th><th>Yr 2 EBITDA</th></tr></thead><tbody>';
+  for(i=0;i<n;i++){var bm="—",y1=0,y2=0;
+    for(t=0;t<NMx;t++){var st=R[t].states[i];if(t<12)y1+=st.ebitda;else y2+=st.ebitda;if(bm==="—"&&st.rev>0&&st.ebitda>=0)bm="M"+(t+1);}
+    be+='<tr><td>'+STATES[i].name+'</td><td>'+bm+'</td><td>'+fmt(y1)+'</td><td>'+fmt(y2)+'</td></tr>';}
   $("stateBE").innerHTML=be+'</tbody>';
   var head='<thead><tr><th>'+lab+' ($000s)</th>';for(t=0;t<NMx;t++)head+='<th>M'+(t+1)+'</th>';head+='<th class="yr">Yr 1</th><th class="yr">Yr 2</th></tr></thead>';
   var b='<tbody>';for(i=0;i<n;i++){b+='<tr><td>'+STATES[i].name+'</td>';var s1=0,s2=0;for(t=0;t<NMx;t++){var v=R[t].states[i][stateMetric];if(t<12)s1+=v;else s2+=v;b+='<td>'+fmt(v)+'</td>';}b+='<td class="yr">'+fmt(s1)+'</td><td class="yr">'+fmt(s2)+'</td></tr>';}
@@ -451,16 +449,16 @@ function renderState(M){
   $("stateTbl").innerHTML=head+b;
 }
 function renderCAC(M,c){
-  var m=M.m1, gm=0.45, bpv=m.visits>0?m.systemSales*1000/m.visits:0;
+  var m=M.m1,gm=m.rev?m.gp/m.rev:0,bpv=m.visits>0?m.rev*1000/m.visits:0;
   var annual=bpv*c.visitsYr, ltv=annual*c.lifeYrs*gm, ratio=c.cac>0?ltv/c.cac:0;
   var moC=bpv*(c.visitsYr/12)*gm, payback=moC>0?c.cac/moC:0;
   $("kNew").textContent=f0(m.newCust);$("kCac").textContent="$"+f0(c.cac);
   $("kLtv").textContent=ratio.toFixed(1)+"x";$("kPay").textContent=payback.toFixed(1)+" mo";
-  var rows=[["National ad fund / mo","$"+f0(m.adfund)+"K"],["New customers / mo (system)",f0(m.newCust)],
-    ["Consumer CAC","$"+f0(c.cac)],["Blended avg ticket","$"+f0(bpv)],
+  var rows=[["Marketing spend / mo","$"+f0(m.marketing)+"K"],["New customers / mo",f0(m.newCust)],
+    ["CAC (per new customer)","$"+f0(c.cac)],["Blended avg ticket","$"+f0(bpv)],
     ["Visits / customer / yr",c.visitsYr.toFixed(1)],["Customer lifetime (yrs)",c.lifeYrs.toFixed(1)],
     ["Annual value / customer","$"+f0(annual)],["Lifetime value (LTV)","$"+f0(ltv)],
-    ["Assumed unit gross margin",(gm*100).toFixed(0)+"%"]];
+    ["Gross margin",(gm*100).toFixed(0)+"%"]];
   var b='<thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>',i;
   for(i=0;i<rows.length;i++)b+='<tr><td>'+rows[i][0]+'</td><td>'+rows[i][1]+'</td></tr>';
   b+='<tr class="me"><td>LTV : CAC</td><td>'+ratio.toFixed(1)+'x</td></tr>';
@@ -469,49 +467,28 @@ function renderCAC(M,c){
   var nc=[],cum=[],run=0;for(i=0;i<12;i++){nc.push(M.rows[i].newCust);run+=M.rows[i].newCust;cum.push(run);}
   multiLine("cacChart",[{color:"#2E7D88",vals:nc},{color:"#1F2A44",vals:cum}],12,function(v){return f0(v);},190);
 }
-function renderUnit(M,c){
-  var m=M.m1, units=m.units||1;
-  var auvK=m.systemSales/units*12, laborK=m.labor/units*12, cogsK=m.nonlabor/units*12;
-  var occK=c.occPct*auvK, royK=c.royalty*auvK, adfK=c.adFund*auvK;
-  var owner=auvK-laborK-cogsK-occK-royK-adfK;
-  var invest=c.buildCost+c.franFee, payback=owner>0?invest/owner:0, coc=invest>0?owner/invest:0;
-  $("kAuv").textContent="$"+(auvK/1000).toFixed(2)+"M";
-  $("kFmar").textContent=pct(auvK>0?owner/auvK:0);
-  $("kPay2").textContent=payback>0?payback.toFixed(1)+" yr":"—";
-  $("kCoc").textContent=pct(coc);
-  var rows=[["Average unit volume (AUV)","$"+f0(auvK)+"K"],["Provider + support labor","−$"+f0(laborK)+"K"],
-    ["Product / supplies (COGS)","−$"+f0(cogsK)+"K"],["Occupancy (rent etc.)","−$"+f0(occK)+"K"],
-    ["Royalty to franchisor","−$"+f0(royK)+"K"],["National ad fund","−$"+f0(adfK)+"K"]];
-  var b='<thead><tr><th>Per unit / yr</th><th>$000s</th></tr></thead><tbody>',i;
-  for(i=0;i<rows.length;i++)b+='<tr><td>'+rows[i][0]+'</td><td>'+rows[i][1]+'</td></tr>';
-  b+='<tr class="me"><td>Franchisee EBITDA (owner earnings)</td><td>$'+f0(owner)+'K</td></tr>';
-  b+='<tr class="me"><td>Franchisee margin</td><td>'+pct(auvK>0?owner/auvK:0)+'</td></tr>';
-  b+='<tr class="me"><td>Investment (build + fee)</td><td>$'+f0(invest)+'K</td></tr>';
-  b+='<tr class="me"><td>Payback / cash-on-cash</td><td>'+(payback>0?payback.toFixed(1)+' yr':'—')+' / '+pct(coc)+'</td></tr></tbody>';
-  $("unitTbl").innerHTML=b;
-}
 function refresh(){
   var c=readControls();
-  $("vRoy").textContent=(+$("roy").value).toFixed(1)+"%";$("vAdf").textContent=(+$("adf").value).toFixed(1)+"%";
-  $("vFfee").textContent="$"+$("ffee").value+"K";$("vSss").textContent=(+$("sss").value).toFixed(1)+"%";
-  $("vDevU").textContent="$"+$("devU").value+"K";$("vOcc").textContent=$("occ").value+"%";$("vBld").textContent="$"+$("bld").value+"K";
-  $("vRpvIP").textContent="$"+$("rpvIP").value;
-  $("vCac").textContent="$"+$("cac").value;$("vVy").textContent=(+$("visitsYr").value).toFixed(1);$("vLy").textContent=(+$("lifeYrs").value).toFixed(1);$("vUtil").textContent=$("util").value+"%";
-  $("vIpcRate").textContent="$"+$("ipcRate").value+"/hr";$("vIpcDay").textContent=(+$("ipcDay").value).toFixed(1);
+  $("vRpvIP").textContent="$"+$("rpvIP").value;$("vRpvVirt").textContent="$"+$("rpvVirt").value;
+  $("vMkt").textContent=$("mktPct").value+"%";$("vCac").textContent="$"+$("cac").value;
+  $("vVy").textContent=(+$("visitsYr").value).toFixed(1);$("vLy").textContent=(+$("lifeYrs").value).toFixed(1);
+  $("vTH").textContent=$("th").value+"%";$("vUtil").textContent=$("util").value+"%";
+  $("vIpcRate").textContent="$"+$("ipcRate").value+"/hr";$("vThcRate").textContent="$"+$("thcRate").value+"/hr";
+  $("vIpcDay").textContent=(+$("ipcDay").value).toFixed(1);$("vThcDay").textContent=(+$("thcDay").value).toFixed(1);
   $("vRnR").textContent=(+$("rnR").value).toFixed(2);$("vRnC").textContent=$("rnC").value;
   $("vBhtR").textContent=(+$("bhtR").value).toFixed(2);$("vBhtC").textContent=$("bhtC").value;
   $("vCcR").textContent=(+$("ccR").value).toFixed(2);$("vCcC").textContent=$("ccC").value;
   $("vSupR").textContent=(+$("supR").value).toFixed(2);$("vSupC").textContent=$("supC").value;
-  $("vIpFac").textContent="$"+$("ipFac").value;
+  $("vIpFac").textContent="$"+$("ipFac").value;$("vThFac").textContent="$"+$("thFac").value;
   $("vEqA").textContent="$"+(+$("eqA").value).toFixed(1)+"M";$("vEqM").textContent="M"+$("eqM").value;
   $("vDbA").textContent="$"+(+$("dbA").value).toFixed(1)+"M";$("vDbM").textContent="M"+$("dbM").value;
   var M=model(c);
-  kpis(c,M);chart(M,c);pnlTable(M);laborTable(M);renderBench(M,c);renderEcon(M);renderState(M);renderCAC(M,c);renderUnit(M,c);saveState();
+  kpis(c,M);chart(M,c);pnlTable(M);laborTable(M);renderBench(M,c);renderEcon(M);renderState(M);renderCAC(M,c);saveState();
 }
 (function(){
   loadState();
   var i,btns,segs;
-  var COMMAF=[];
+  var COMMAF=[];for(i=0;i<5;i++){COMMAF.push("s"+i+"_r0","s"+i+"_fx","s"+i+"_en");}
   function fmtC(el){var v=(""+el.value).replace(/,/g,"");if(v==="")return;var nn=Number(v);if(!isNaN(nn))el.value=nn.toLocaleString();}
   for(i=0;i<COMMAF.length;i++){(function(el){el.addEventListener("change",function(){fmtC(el);});fmtC(el);})($(COMMAF[i]));}
   for(i=0;i<CTRLS.length;i++){$(CTRLS[i]).addEventListener("input",refresh);$(CTRLS[i]).addEventListener("change",refresh);}
