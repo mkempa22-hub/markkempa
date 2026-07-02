@@ -77,14 +77,18 @@ table th,thead{background:#1b2028}
 <div class="tabs">
 <div class="tab active" data-t="dash" onclick="showTab('dash')">Dashboard &amp; Map</div>
 <div class="tab" data-t="svc" onclick="showTab('svc')">Service Lines</div>
-<div class="tab" data-t="cash" onclick="showTab('cash')">Cash Runway</div>
-<div class="tab" data-t="unit" onclick="showTab('unit')">Unit Economics</div>
-<div class="tab" data-t="ai" onclick="showTab('ai')">AI Economics</div>
+<div class="tab" data-t="cash" onclick="showTab('cash')">Cash Runway <span style="opacity:.7;font-weight:400">(inputs)</span></div>
+<div class="tab" data-t="unit" onclick="showTab('unit')">Unit Economics <span style="opacity:.7;font-weight:400">(inputs)</span></div>
+<div class="tab" data-t="ai" onclick="showTab('ai')">AI Economics <span style="opacity:.7;font-weight:400">(inputs)</span></div>
 </div></div></header>
 <main><div class="wrap">
 
 <!-- DASHBOARD + MAP -->
 <section class="panel active" id="dash">
+  <div class="card" style="padding:12px 16px;margin-bottom:16px;display:flex;align-items:center;gap:10px">
+    <span style="font-size:1.05rem;line-height:1">⚙️</span>
+    <span style="font-size:.85rem;color:var(--soft)">This tab is read-only. Drivers &amp; assumptions live on <b style="color:var(--ink)">Cash Runway</b>, <b style="color:var(--ink)">Unit Economics</b>, and <b style="color:var(--ink)">AI Economics</b> (tabs above, marked <i>inputs</i>) — adjust the sliders there and this dashboard recalculates live.</span>
+  </div>
   <div class="toolbar">
     <div class="seg" id="metricSeg">
       <button data-m="rev" class="on" onclick="setMetric('rev')">Revenue</button>
@@ -240,13 +244,13 @@ function renderMap(){
   const maxRev=Math.max(...vals.map(v=>v.rev)),maxMg=Math.max(...vals.map(v=>v.mg));
   let svg=`<svg id="usmap" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">`;
   for(const code in GRID){const[r,c]=GRID[code];const x=c*cell,y=r*cell;
-    const isData=STLIST.includes(code);let fill='#e6ebf2',tcol='#9aa6b6';
-    if(isData){const v=stateVal(code);let t;
-      if(metric==='rev')t=maxRev?v.rev/maxRev:0,fill=lerp('#dbeafe','#1f4e79',t);
-      else if(metric==='margin')t=maxMg?v.mg/maxMg:0,fill=lerp('#dcfce7','#14532d',t);
+    const isData=STLIST.includes(code);let fill='#232a35',tcol='#5b6472';
+    if(isData){const v=stateVal(code);let t,t2;
+      if(metric==='rev')t=maxRev?v.rev/maxRev:0,t2=0.22+0.78*t,fill=lerp('#60a5fa','#0b2e4f',t2);
+      else if(metric==='margin')t=maxMg?v.mg/maxMg:0,t2=0.22+0.78*t,fill=lerp('#4ade80','#0d3b26',t2);
       else t=Math.max(0,Math.min(1,v.pct/0.9)),fill=pctColor(t);
-      tcol=(metric!=='pct'&&t>0.45)||(metric==='pct'&&t>0.35&&t<0.75)?'#fff':'#fff';tcol=t>0.5?'#fff':'#1f2937';}
-    const sel=isData&&code===selState?' stroke="#0e1726" stroke-width="2.5"':' stroke="#fff" stroke-width="1.5"';
+      tcol=t>0.45?'#fff':'#0b1220';}
+    const sel=isData&&code===selState?' stroke="#fff" stroke-width="2.5"':isData?' stroke="#0f1216" stroke-width="1.5"':' stroke="#0f1216" stroke-width="1.5"';
     svg+=`<g class="${isData?'st':''}" ${isData?`data-s="${code}" onmousemove="tip(event,'${code}')" onmouseleave="hideTip()" onclick="pick('${code}')"`:''}>`+
       `<rect x="${x+pad}" y="${y+pad}" width="${cell-pad*2}" height="${cell-pad*2}" rx="6" fill="${fill}"${sel}/>`+
       `<text x="${x+cell/2}" y="${y+cell/2+4}" text-anchor="middle" fill="${tcol}">${code}</text></g>`;
@@ -256,8 +260,8 @@ function renderMap(){
   $('mapTitle').textContent=metric==='rev'?'Revenue by state':metric==='margin'?'Contribution margin $ by state':'Contribution margin % by state';
   // legend
   if(metric==='pct'){$('legBar').style.background='linear-gradient(90deg,#dc2626,#f59e0b,#16a34a)';$('legLo').textContent='0%';$('legHi').textContent='90%+';}
-  else if(metric==='rev'){$('legBar').style.background='linear-gradient(90deg,#dbeafe,#1f4e79)';$('legLo').textContent='$0';$('legHi').textContent=fK(maxRev);}
-  else{$('legBar').style.background='linear-gradient(90deg,#dcfce7,#14532d)';$('legLo').textContent='$0';$('legHi').textContent=fK(maxMg);}
+  else if(metric==='rev'){$('legBar').style.background='linear-gradient(90deg,#60a5fa,#0b2e4f)';$('legLo').textContent='$0';$('legHi').textContent=fK(maxRev);}
+  else{$('legBar').style.background='linear-gradient(90deg,#4ade80,#0d3b26)';$('legLo').textContent='$0';$('legHi').textContent=fK(maxMg);}
   renderSide();
 }
 function tip(e,s){const v=stateVal(s),t=$('tip');const rect=$('mapWrap').getBoundingClientRect();
