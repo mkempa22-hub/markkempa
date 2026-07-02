@@ -32,22 +32,22 @@ a{color:inherit}
 .bgset{min-height:120vh;display:flex;flex-wrap:wrap;align-content:space-around;gap:130px;padding:80px 90px;justify-content:space-around}
 .ico{flex:0 0 auto;width:54px;height:54px}
 /* layout */
-.shell{position:relative;z-index:1;max-width:1060px;margin:0 auto;padding:0 24px 90px}
-.mast{text-align:center;padding:26px 0 18px;border-bottom:1px solid var(--line);max-width:680px;margin:0 auto}
-.avatar{width:78px;height:78px;border-radius:50%;margin:0 auto 12px;overflow:hidden;background:#0a0c10;border:1px solid var(--line);box-shadow:0 0 0 6px rgba(255,255,255,.02);animation:floaty 6s ease-in-out infinite}
+.shell{position:relative;z-index:1;max-width:1060px;margin:0 auto;padding:0 24px 60px}
+.mast{text-align:center;padding:20px 0 14px;border-bottom:1px solid var(--line);max-width:680px;margin:0 auto}
+.avatar{width:70px;height:70px;border-radius:50%;margin:0 auto 10px;overflow:hidden;background:#0a0c10;border:1px solid var(--line);box-shadow:0 0 0 6px rgba(255,255,255,.02);animation:floaty 6s ease-in-out infinite}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-.mast h1{font-family:var(--serif);font-weight:700;font-size:31px;letter-spacing:-.01em;margin:0 0 5px}
+.mast h1{font-family:var(--serif);font-weight:700;font-size:28px;letter-spacing:-.01em;margin:0}
 .mast .tagline{color:var(--soft);font-size:14px;font-weight:500;margin:0 auto;max-width:56ch}
-.subrow{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
-.btn{font-weight:700;font-size:13.5px;padding:10px 20px;border-radius:8px;text-decoration:none;transition:.15s}
+.subrow{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.btn{font-weight:700;font-size:13.5px;padding:9px 18px;border-radius:8px;text-decoration:none;transition:.15s}
 .btn-acc{background:var(--accent);color:#fff}.btn-acc:hover{filter:brightness(1.08)}
 .btn-ghost{border:1px solid var(--line);color:var(--soft)}.btn-ghost:hover{border-color:var(--accent);color:#fff}
-.nav{display:flex;gap:24px;justify-content:center;padding:16px 0;border-bottom:1px solid var(--line);font-size:13px;font-weight:600;color:var(--muted);position:sticky;top:38px;background:rgba(15,18,22,.85);backdrop-filter:blur(8px);z-index:30}
+.nav{display:flex;gap:24px;justify-content:center;padding:12px 0;border-bottom:1px solid var(--line);font-size:13px;font-weight:600;color:var(--muted);position:sticky;top:38px;background:rgba(15,18,22,.85);backdrop-filter:blur(8px);z-index:30}
 .nav a{text-decoration:none}.nav a:hover{color:var(--accent)}
-.sec{padding:22px 0;border-bottom:1px solid var(--line)}
-.kicker{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:800;margin:0 0 14px}
+.sec{padding:16px 0;border-bottom:1px solid var(--line)}
+.kicker{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:800;margin:0 0 10px}
 .aboutwrap{max-width:760px;margin:0 auto}
-.lead{font-family:var(--serif);font-size:18.5px;line-height:1.5;color:#eef1f6;margin:0;font-style:italic}
+.lead{font-family:var(--serif);font-size:17.5px;line-height:1.45;color:#eef1f6;margin:0;font-style:italic}
 .lead b{font-style:normal;color:#fff}
 /* timeline */
 .tl{margin-top:6px}
@@ -57,10 +57,10 @@ a{color:inherit}
 .tle .co{font-weight:700;font-size:15.5px}
 .tle .ro{font-size:12.5px;color:var(--muted)}
 .tle .hl{font-size:12.5px;color:var(--teal);font-weight:600;margin-top:2px}
-.edu{margin-top:14px;font-size:12.5px;color:var(--muted)}
+.edu{margin-top:10px;font-size:12.5px;color:var(--muted)}
 .edu b{color:var(--soft)}
 /* work list (substack post style) */
-.post{display:block;text-decoration:none;color:inherit;padding:20px 0;border-top:1px solid var(--line)}
+.post{display:block;text-decoration:none;color:inherit;padding:14px 0;border-top:1px solid var(--line)}
 .post:hover .ptitle{color:var(--accent)}
 .pmeta{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:6px;display:flex;gap:10px;align-items:center}
 .pmeta .tagchip{color:var(--teal)}
@@ -69,28 +69,28 @@ a{color:inherit}
 .popen{display:inline-block;margin-top:10px;color:var(--accent);font-weight:700;font-size:13px}
 .subl{display:inline-block;margin-top:8px;color:var(--teal);font-weight:600;font-size:12.5px;text-decoration:none}
 /* media diet callout */
-.diet{background:linear-gradient(135deg,#0b2a2c,#0d3b3a);border:1px solid #194a47;border-radius:14px;padding:24px 24px;margin-top:6px}
-.diet h3{font-family:var(--serif);font-size:20px;margin:0 0 6px}
-.diet p{color:#bfe9e6;font-size:13.5px;margin:0 0 14px}
-.dchips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+.diet{background:linear-gradient(135deg,#0b2a2c,#0d3b3a);border:1px solid #194a47;border-radius:14px;padding:18px 20px;margin-top:6px}
+.diet h3{font-family:var(--serif);font-size:18px;margin:0 0 5px}
+.diet p{color:#bfe9e6;font-size:13.5px;margin:0 0 12px}
+.dchips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
 .dchip{font-size:11px;font-weight:600;color:#d2efeb;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:5px 11px;border-radius:999px}
-.foot{text-align:center;color:var(--muted);font-size:11.5px;padding-top:26px}
-.cols2{display:grid;grid-template-columns:1fr 1fr;gap:36px;padding:24px 0;border-bottom:1px solid var(--line)}
-@media(max-width:840px){.cols2{grid-template-columns:1fr;gap:30px}}
-.tle{display:block;padding:14px 0;border-top:1px solid var(--line)}
+.foot{text-align:center;color:var(--muted);font-size:11.5px;padding-top:18px}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
+@media(max-width:840px){.cols2{grid-template-columns:1fr;gap:24px}}
+.tle{display:block;padding:7px 0;border-top:1px solid var(--line)}
 .tle:first-child{border-top:none}
 .tle .yr{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-.tle .co{font-weight:700;font-size:15.5px;margin-top:1px}
+.tle .co{font-weight:700;font-size:15px;margin-top:1px}
 .tle .ro{font-size:12px;color:var(--muted)}
-.tle .desc{font-size:13px;color:var(--soft);margin-top:5px;line-height:1.5}
-.post{padding:18px 0;border-top:1px solid var(--line)}
+.tle .desc{font-size:12.5px;color:var(--soft);margin-top:3px;line-height:1.42}
+.post{padding:12px 0;border-top:1px solid var(--line)}
 .post:first-of-type{border-top:none}
-#work .post{background:linear-gradient(135deg,#0b2a2c,#0d3b3a);border:1px solid #194a47;border-radius:12px;padding:12px 14px;margin-bottom:0}
-.workgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+#work .post{background:linear-gradient(135deg,#0b2a2c,#0d3b3a);border:1px solid #194a47;border-radius:12px;padding:10px 12px;margin-bottom:0}
+.workgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 .workgrid>a.post{height:100%;display:flex;flex-direction:column}
 .workgrid>a.post .pdek{flex:1 0 auto}
 .workgrid>*:last-child:nth-child(odd){grid-column:1 / -1}
-.postwrap{background:linear-gradient(135deg,#0b2a2c,#0d3b3a);border:1px solid #194a47;border-radius:12px;padding:12px 14px;height:100%;display:flex;flex-direction:column}
+.postwrap{background:linear-gradient(135deg,#0b2a2c,#0d3b3a);border:1px solid #194a47;border-radius:12px;padding:10px 12px;height:100%;display:flex;flex-direction:column}
 .postwrap .post{background:none;border:none;padding:0;border-radius:0;flex:1 0 auto;display:flex;flex-direction:column}
 .postwrap .post .pdek{flex:1 0 auto}
 @media(max-width:640px){.workgrid{grid-template-columns:1fr}.workgrid>*:last-child:nth-child(odd){grid-column:auto}}
@@ -118,8 +118,8 @@ a{color:inherit}
 .logo img{max-height:24px;max-width:120px;object-fit:contain;display:block}
 .corow{display:flex;align-items:center;gap:9px;margin-top:1px}
 .cmono{width:26px;height:26px;border-radius:7px;color:#fff;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
-.stat{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:16px 16px;text-align:center}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.stat{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:13px 14px;text-align:center}
 .stat .n{font-family:var(--serif);font-size:25px;font-weight:700;color:var(--teal);line-height:1}
 .stat .l{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:6px;font-weight:700}
 @media(max-width:560px){.stats{grid-template-columns:1fr}}
@@ -148,7 +148,6 @@ a{color:inherit}
       </svg>
     </div>
     <h1>Mark Kempa</h1>
-    <p class="tagline">Healthcare finance leader with experience across VC- and PE-backed companies.</p>
     <div class="subrow">
       <a class="btn btn-acc" href="mailto:mkempa22@gmail.com">Get in touch</a>
       <a class="btn btn-ghost" href="Mark_Kempa_Resume.pdf" download>↓ Résumé (PDF)</a>
@@ -176,10 +175,10 @@ a{color:inherit}
       <div class="tle"><div class="yr">Jan 2019 – Dec 2020</div><div class="corow"><span class="cmono" style="background:#1e3a8a">M</span><span class="co">Everside / Marathon Health</span></div><div class="ro">Senior Financial Analyst</div><p class="desc">Owned the monthly board &amp; investor reporting package, and built the clinic-level unit-economics framework that shaped growth strategy and sales targeting.</p></div>
       <div class="tle"><div class="yr">Sep 2017 – Jan 2019</div><div class="corow"><span class="cmono" style="background:#0072ce">I</span><span class="co">Intermountain Health</span></div><div class="ro">Senior Financial Analyst</div><p class="desc">Prepared consolidated statements for a $2.5B health system and automated the close, cutting the preparation timeline by two days.</p></div>
       <div class="tle"><div class="yr">Oct 2014 – Aug 2017</div><div class="corow"><span class="cmono" style="background:#e81a3b">B</span><span class="co">BDO USA</span></div><div class="ro">Senior Assurance Associate</div><p class="desc">Led financial audit teams for healthcare, tech, and manufacturing clients ($30M–$1B revenue), building the CPA-grade controls foundation everything since is built on.</p></div>
-      <p class="kicker" style="margin-top:24px">Education</p>
+      <p class="kicker" style="margin-top:16px">Education</p>
       <div class="tle"><div class="yr">2013</div><div class="co">University of Michigan, Ross School of Business</div><div class="ro">Bachelor of Business Administration</div></div>
       <div class="tle"><div class="yr">2014</div><div class="co">Oakland University, School of Business Administration</div><div class="ro">Master of Accounting (MAcc)</div></div>
-      <p class="lead" style="margin-top:14px;font-size:15px">Certified Public Accountant — licensed 2016, Michigan State Board of Accountancy <span style="color:var(--muted);font-style:italic">(currently inactive)</span>.</p>
+      <p class="lead" style="margin-top:10px;font-size:14px">Certified Public Accountant — licensed 2016, Michigan State Board of Accountancy <span style="color:var(--muted);font-style:italic">(currently inactive)</span>.</p>
     </div>
     <div id="work">
       <p class="kicker">AI Work</p>
