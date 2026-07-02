@@ -111,6 +111,12 @@ table.cf .neg{color:var(--red)}
 .nm label{display:block;font-size:11.5px;color:var(--muted);margin-bottom:4px}
 .nm input{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:9px;font-size:13px;font-variant-numeric:tabular-nums;font-family:inherit}
 .nm input:focus{outline:none;border-color:var(--ac)}
+.unitwrap{position:relative}
+.unitwrap.pre input{padding-left:18px}
+.unitwrap.suf input{padding-right:18px}
+.unitwrap .unit{position:absolute;top:50%;transform:translateY(-50%);font-size:11px;color:var(--muted);pointer-events:none}
+.unitwrap.pre .unit{left:8px}
+.unitwrap.suf .unit{right:7px}
 table.ct{width:100%;border-collapse:collapse;font-size:12px}
 table.ct th{font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:700;text-align:right;padding:6px 5px}
 table.ct th:first-child{text-align:left}
@@ -199,7 +205,7 @@ table.ct input:focus{outline:none;border-color:var(--ac)}
 <script>
 const DEFAULT={"states": [{"name": "Florida", "centers_start": 3, "opens": [2, 2, 2], "prem": 1450, "raf": 1.12, "tcoc": 1140}, {"name": "Texas", "centers_start": 1, "opens": [1, 2, 2], "prem": 1320, "raf": 1.06, "tcoc": 1070}, {"name": "Arizona", "centers_start": 0, "opens": [1, 1, 2], "prem": 1250, "raf": 1.02, "tcoc": 1010}], "mix": {"A": 0.65, "B": 0.15, "C": 0.12, "D": 0.08}, "panel_mature": 1200, "panel_open_pct": 0.08, "panel_ramp_m": 24, "mat_months": 24, "raf_open": 0.88, "tcoc_open": 1.1, "center_fixed": 95000, "cmvar": 18, "ga": 120000, "cmPlan": 45, "arch": {"A": {"capPct": 0.9, "cm": 0, "pccp": 0, "ffs": 0, "target": 0, "ssplit": 0, "lsplit": 0, "downside": 0, "slprem": 35, "slrec": 26, "fullcap": 1}, "B": {"capPct": 0, "cm": 55, "pccp": 0, "ffs": 0, "target": 0.88, "ssplit": 0.5, "lsplit": 0.5, "downside": 1, "slprem": 0, "slrec": 0, "fullcap": 0}, "C": {"capPct": 0, "cm": 0, "pccp": 0, "ffs": 50, "target": 0.9, "ssplit": 0.6, "lsplit": 0, "downside": 0, "slprem": 0, "slrec": 0, "fullcap": 0}, "D": {"capPct": 0, "cm": 0, "pccp": 80, "ffs": 0, "target": 0.98, "ssplit": 0.5, "lsplit": 0.5, "downside": 1, "slprem": 0, "slrec": 0, "fullcap": 0}}, "buckets": {"Inpatient": 0.3, "Outpatient / ED": 0.16, "Specialist professional": 0.18, "Primary care (internal)": 0.08, "Post-acute / SNF": 0.1, "Pharmacy (Part D)": 0.12, "Ancillary (lab / imaging / DME)": 0.04, "Other": 0.02}};let S=structuredClone(DEFAULT);
 const KEYS=['A','B','C','D'];
-const COL={A:'#4f46e5',B:'#0ea5a4',C:'#f59e0b',D:'#e11d48',green:'#10b981',red:'#ef4444',ink:'#0b1220',muted:'#6b7689',grid:'#272d38'};
+const COL={A:'#4f46e5',B:'#0ea5a4',C:'#f59e0b',D:'#e11d48',green:'#10b981',red:'#ef4444',ink:'#0b1220',muted:'#6b7689',grid:'#272d38',teal:'#0ea5a4'};
 const STCOL=['#4f46e5','#0ea5a4','#f59e0b','#e11d48','#7c75f2'];
 const usd=v=>{const a=Math.abs(v),s=v<0?'-':'';if(a>=1e6)return s+'$'+(a/1e6).toFixed(1)+'M';if(a>=1e3)return s+'$'+(a/1e3).toFixed(0)+'k';return s+'$'+a.toFixed(0);};
 const pmpm=v=>(v<0?'-$':'$')+Math.abs(v).toFixed(0);
@@ -414,10 +420,16 @@ window.onSlider=(p,v)=>{v=parseFloat(v);setP(p,v);const d=document.querySelector
 window.onNum=(p,v,mult)=>{v=parseFloat(v);if(isNaN(v))return;setP(p,v/(mult||1));refresh();};
 window.onNumC=(p,el,mult)=>{const v=parseFloat(el.value.replace(/,/g,''));if(isNaN(v))return;setP(p,v/(mult||1));refresh();};
 window.fmtField=el=>{const v=parseFloat(el.value.replace(/,/g,''));if(!isNaN(v))el.value=v.toLocaleString();};
-const num=(p,lab,step,mult,comma)=>{mult=mult||1;const val=getP(p)*mult;return comma?`<div class="nm"><label>${lab}</label><input type="text" inputmode="numeric" value="${fmtN(val)}" oninput="onNumC('${p}',this,${mult})" onchange="fmtField(this)"></div>`:`<div class="nm"><label>${lab}</label><input type="number" step="${step}" value="${val}" oninput="onNum('${p}',this.value,${mult})"></div>`;};
+const num=(p,lab,step,mult,comma,unit)=>{mult=mult||1;const val=getP(p)*mult;
+ const inp=comma?`<input type="text" inputmode="numeric" value="${fmtN(val)}" oninput="onNumC('${p}',this,${mult})" onchange="fmtField(this)">`:`<input type="number" step="${step}" value="${val}" oninput="onNum('${p}',this.value,${mult})">`;
+ const wrapped=unit==='usd'?`<div class="unitwrap pre"><span class="unit">$</span>${inp}</div>`:unit==='pct'?`<div class="unitwrap suf"><span class="unit">%</span>${inp}</div>`:inp;
+ return `<div class="nm"><label>${lab}</label>${wrapped}</div>`;};
 const ci=(p,step)=>`<td><input type="number" step="${step||1}" value="${+(+getP(p)).toFixed(4)}" oninput="onNum('${p}',this.value,1)"></td>`;
-const cc=p=>`<td><input type="text" inputmode="numeric" value="${fmtN(getP(p))}" oninput="onNumC('${p}',this,1)" onchange="fmtField(this)"></td>`;
-const cm=(p,step,mult)=>`<td><input type="number" step="${step}" value="${+(getP(p)*mult).toFixed(4)}" oninput="onNum('${p}',this.value,${mult})"></td>`;
+const cc=p=>`<td><div class="unitwrap pre"><span class="unit">$</span><input type="text" inputmode="numeric" value="${fmtN(getP(p))}" oninput="onNumC('${p}',this,1)" onchange="fmtField(this)"></div></td>`;
+const cm=(p,step,mult,unit)=>{const inp=`<input type="number" step="${step}" value="${+(getP(p)*mult).toFixed(4)}" oninput="onNum('${p}',this.value,${mult})">`;
+ if(unit==='pct')return `<td><div class="unitwrap suf"><span class="unit">%</span>${inp}</div></td>`;
+ if(unit==='usd')return `<td><div class="unitwrap pre"><span class="unit">$</span>${inp}</div></td>`;
+ return `<td>${inp}</td>`;};
 
 function buildPanel(){
  let h=`<div class="presets">
@@ -436,15 +448,16 @@ function buildPanel(){
   slider('raf_open','RAF at open (× mature)','0.75','1.00','0.01','d2')+
   slider('tcoc_open','TCOC at open (× mature)','1.00','1.25','0.01','d2')+`</div>`+
   `<div class="nums" style="margin-top:12px">`+num('panel_mature','Mature panel / center',50,1,true)+`</div></div>`;
+
  h+=`<div class="grp"><p class="grp-t">Contract mix (% of members · auto-normalized)</p><div class="sliders">`+
   slider('mix.A','A · Full Cap','0','1','0.01','pct')+slider('mix.B','B · Two-Sided','0','1','0.01','pct')+
   slider('mix.C','C · Upside','0','1','0.01','pct')+slider('mix.D','D · REACH','0','1','0.01','pct')+`</div></div>`;
  h+=`<div class="grp"><p class="grp-t">Costs</p><div class="nums">`+
-  num('center_fixed','Fixed opex / center / mo',1000,1,true)+num('cmvar','Care-mgmt PMPM',1,1)+num('ga','Corporate G&A / mo',1000,1,true)+num('cmPlan','Plan-pays care-mgmt PMPM',5,1)+`</div></div>`;
- const AF=[['capPct','Cap %',1,100],['cm','Care-mgmt',1,1],['pccp','PCCP',1,1],['ffs','FFS',1,1],['target','Target %',1,100],['ssplit','Save %',5,100]];
+  num('center_fixed','Fixed opex / center / mo',1000,1,true,'usd')+num('cmvar','Care-mgmt PMPM',1,1,false,'usd')+num('ga','Corporate G&A / mo',1000,1,true,'usd')+num('cmPlan','Plan-pays care-mgmt PMPM',5,1,false,'usd')+`</div></div>`;
+ const AF=[['capPct','Cap %',1,100,'pct'],['cm','Care-mgmt',1,1,'usd'],['pccp','PCCP',1,1,'usd'],['ffs','FFS',1,1,'usd'],['target','Target %',1,100,'pct'],['ssplit','Save %',5,100,'pct']];
  h+=`<div class="grp"><p class="grp-t">Contract structures</p><table class="ct"><thead><tr><th>Contract</th>`+AF.map(f=>`<th>${f[1]}</th>`).join('')+`</tr></thead><tbody>`;
  const cn={A:'Full Cap',B:'Two-Sided',C:'Upside',D:'REACH'};
- for(const k of KEYS){h+=`<tr><td><span class="dot" style="background:${COL[k]}"></span>${k}</td>`+AF.map(f=>cm('arch.'+k+'.'+f[0],f[2],f[3])).join('')+`</tr>`;}
+ for(const k of KEYS){h+=`<tr><td><span class="dot" style="background:${COL[k]}"></span>${k}</td>`+AF.map(f=>cm('arch.'+k+'.'+f[0],f[2],f[3],f[4])).join('')+`</tr>`;}
  h+=`</tbody></table></div>`;
  document.getElementById('panelBody').innerHTML=h;
 }
